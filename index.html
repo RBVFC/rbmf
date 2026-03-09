@@ -1,0 +1,2203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riviera Beach Music Fest 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ultra&family=Heebo:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #cb4d48;
+    --cream: #ede4d2;
+    --teal: #205066;
+    --black: #0d0d0d;
+    --red-dark: #a33c38;
+    --cream-dark: #d4c9b2;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  /* ── ULTRA FONT GLOBAL TUNING ── */
+  /* Ultra is a single-weight slab serif — no bold variant exists */
+  [style*="font-family:'Ultra'"],
+  .hero-title, .section-title, .artist-name, .modal-name,
+  .ticket-price, .stat-number, .footer-brand-name,
+  .vendor-name, .info-title, .sched-artist, .nav-logo {
+    font-weight: 400;
+  }
+
+  body {
+    background: var(--black);
+    color: var(--cream);
+    font-family: 'Heebo', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.3;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 48px;
+    background: rgba(13,13,13,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(237,228,210,0.08);
+    transition: all 0.3s;
+  }
+
+  .nav-logo {
+    font-family: 'Ultra', serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: var(--cream);
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+  .nav-logo span { color: var(--red); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+  }
+
+  .nav-links a:hover { opacity: 1; color: var(--red); }
+
+  .nav-cta {
+    background: var(--red);
+    color: var(--cream) !important;
+    padding: 8px 22px;
+    border-radius: 2px;
+    opacity: 1 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--red-dark) !important; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+    background: var(--black);
+    overflow: hidden;
+  }
+
+  .hero-bg-stripes {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -55deg,
+      transparent,
+      transparent 60px,
+      rgba(203,77,72,0.03) 60px,
+      rgba(203,77,72,0.03) 61px
+    );
+  }
+
+  .hero-glow {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(203,77,72,0.12) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 120px 24px 60px;
+    max-width: 1100px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(203,77,72,0.15);
+    border: 1px solid rgba(203,77,72,0.4);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 40px;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--red);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+
+  .hero-title {
+    font-family: 'Ultra', serif;
+    font-size: clamp(64px, 12vw, 140px);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: var(--cream);
+    animation: fadeUp 0.8s 0.15s ease both;
+    position: relative;
+  }
+
+  .hero-title .line-red { color: var(--red); }
+
+  .hero-subtitle {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(18px, 3vw, 28px);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-top: 24px;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .hero-date-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 60px;
+    animation: fadeUp 0.8s 0.45s ease both;
+  }
+
+  .hero-date-item {
+    text-align: center;
+  }
+
+  .hero-date-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 4px;
+  }
+
+  .hero-date-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    letter-spacing: 0.08em;
+    color: var(--cream);
+  }
+
+  .hero-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(237,228,210,0.2);
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 48px;
+    animation: fadeUp 0.8s 0.6s ease both;
+  }
+
+  .btn-primary {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: var(--red);
+    color: var(--cream);
+    padding: 16px 40px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.2s;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+
+  .btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); }
+
+  .btn-outline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--cream);
+    padding: 16px 40px;
+    border: 1px solid rgba(237,228,210,0.3);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: border-color 0.2s, transform 0.2s;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+
+  .btn-outline:hover { border-color: var(--cream); transform: translateY(-2px); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.4;
+    animation: fadeIn 1s 1.2s both;
+  }
+
+  .hero-scroll span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: var(--cream);
+    animation: scrollAnim 2s infinite;
+  }
+
+  @keyframes scrollAnim {
+    0% { transform: scaleY(0); transform-origin: top; }
+    50% { transform: scaleY(1); transform-origin: top; }
+    51% { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.4; }
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 100px 0; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--red);
+  }
+
+  .section-title {
+    font-family: 'Ultra', serif;
+    font-size: clamp(32px, 5.5vw, 64px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: var(--cream);
+    margin-bottom: 48px;
+  }
+
+  /* ── CAUSE SECTION ── */
+  #cause {
+    background: var(--teal);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #cause::before {
+    content: '13';
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Ultra', serif;
+    font-size: 400px;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .cause-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .cause-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    opacity: 0.85;
+    margin-bottom: 20px;
+  }
+
+  .cause-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .stat-box {
+    background: rgba(237,228,210,0.07);
+    padding: 32px;
+    border: 1px solid rgba(237,228,210,0.1);
+    transition: background 0.2s;
+  }
+
+  .stat-box:hover { background: rgba(237,228,210,0.12); }
+
+  .stat-number {
+    font-family: 'Ultra', serif;
+    font-size: 46px;
+    color: var(--cream);
+    line-height: 1;
+  }
+
+  .stat-number span { color: var(--red); font-size: 32px; }
+
+  .stat-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-top: 8px;
+  }
+
+  /* ── LINEUP ── */
+  #lineup {
+    background: var(--black);
+  }
+
+  .lineup-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .artists-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .artist-card {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: #1a1a1a;
+    cursor: pointer;
+    group: true;
+  }
+
+  .artist-card.featured {
+    grid-column: span 2;
+    aspect-ratio: 16/9;
+  }
+
+  .artist-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(30%) contrast(1.1);
+    transition: transform 0.5s ease, filter 0.5s ease;
+  }
+
+  .artist-card:hover .artist-photo {
+    transform: scale(1.05);
+    filter: grayscale(0%) contrast(1.1);
+  }
+
+  .artist-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a1f1f 100%);
+    gap: 16px;
+  }
+
+  .artist-placeholder .icon {
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(203,77,72,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--red);
+    opacity: 0.6;
+    font-size: 24px;
+  }
+
+  .artist-placeholder-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.3;
+  }
+
+  .artist-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(13,13,13,0.95) 0%, rgba(13,13,13,0.2) 50%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px;
+    transform: translateY(8px);
+    transition: transform 0.3s;
+  }
+
+  .artist-card:hover .artist-overlay { transform: translateY(0); }
+
+  .artist-genre {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 6px;
+  }
+
+  .artist-name {
+    font-family: 'Ultra', serif;
+    font-size: clamp(18px, 2.5vw, 28px);
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--cream);
+  }
+
+  .artist-bio-preview {
+    font-size: 13px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s, max-height 0.3s;
+    margin-top: 8px;
+    line-height: 1.6;
+    color: rgba(237,228,210,0.8);
+  }
+
+  .artist-card:hover .artist-bio-preview {
+    opacity: 1;
+    max-height: 80px;
+  }
+
+  .artist-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    opacity: 0;
+    transition: opacity 0.3s 0.1s;
+  }
+
+  .artist-card:hover .artist-social { opacity: 1; }
+
+  .social-link {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.2s, color 0.2s;
+    padding: 4px 10px;
+    border: 1px solid rgba(237,228,210,0.2);
+  }
+
+  .social-link:hover { opacity: 1; color: var(--red); border-color: var(--red); }
+
+  /* MODAL */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    place-items: center;
+  }
+
+  .modal-overlay.active { display: grid; }
+
+  .modal {
+    background: #111;
+    border: 1px solid rgba(237,228,210,0.1);
+    max-width: 720px;
+    width: 90%;
+    max-height: 88vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalIn 0.3s ease;
+  }
+
+  @keyframes modalIn {
+    from { opacity: 0; transform: scale(0.95) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: none; border: none;
+    color: var(--cream);
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    z-index: 10;
+  }
+
+  .modal-close:hover { opacity: 1; }
+
+  .modal-header {
+    height: 280px;
+    background: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .modal-header img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%);
+  }
+
+  .modal-header-placeholder {
+    width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a, #2a1515);
+    font-family: 'Ultra', serif;
+    font-size: 72px;
+    color: rgba(203,77,72,0.1);
+    text-transform: uppercase;
+  }
+
+  .modal-header-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #111 0%, transparent 60%);
+  }
+
+  .modal-body { padding: 32px; }
+
+  .modal-genre {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+
+  .modal-name {
+    font-family: 'Ultra', serif;
+    font-size: 42px;
+    text-transform: uppercase;
+    line-height: 0.95;
+    color: var(--cream);
+    margin-bottom: 20px;
+  }
+
+  .modal-bio {
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.8;
+    margin-bottom: 28px;
+  }
+
+  .modal-info-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+
+  .modal-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .modal-info-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.4;
+  }
+
+  .modal-info-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--cream);
+  }
+
+  .modal-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .modal-link {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid;
+    transition: all 0.2s;
+  }
+
+  .modal-link.spotify { color: #1DB954; border-color: rgba(29,185,84,0.4); }
+  .modal-link.spotify:hover { background: rgba(29,185,84,0.1); }
+  .modal-link.instagram { color: #E4405F; border-color: rgba(228,64,95,0.4); }
+  .modal-link.instagram:hover { background: rgba(228,64,95,0.1); }
+  .modal-link.facebook { color: #1877F2; border-color: rgba(24,119,242,0.4); }
+  .modal-link.facebook:hover { background: rgba(24,119,242,0.1); }
+  .modal-link.website { color: var(--cream); border-color: rgba(237,228,210,0.3); }
+  .modal-link.website:hover { background: rgba(237,228,210,0.05); }
+
+  .audio-player {
+    margin-top: 24px;
+    padding: 20px;
+    background: rgba(237,228,210,0.04);
+    border: 1px solid rgba(237,228,210,0.08);
+  }
+
+  .audio-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.4;
+    margin-bottom: 10px;
+  }
+
+  audio { width: 100%; accent-color: var(--red); }
+
+  /* ── SCHEDULE ── */
+  #schedule {
+    background: #0f0f0f;
+  }
+
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .schedule-table thead tr {
+    border-bottom: 1px solid rgba(237,228,210,0.15);
+  }
+
+  .schedule-table th {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.4;
+    padding: 12px 20px;
+    text-align: left;
+  }
+
+  .schedule-table tbody tr {
+    border-bottom: 1px solid rgba(237,228,210,0.06);
+    transition: background 0.2s;
+  }
+
+  .schedule-table tbody tr:hover { background: rgba(237,228,210,0.03); }
+
+  .schedule-table td {
+    padding: 20px;
+    vertical-align: middle;
+  }
+
+  .sched-time {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--red);
+    white-space: nowrap;
+    width: 130px;
+  }
+
+  .sched-artist {
+    font-family: 'Ultra', serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: var(--cream);
+  }
+
+  .sched-stage {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--teal);
+    opacity: 0.8;
+    margin-top: 3px;
+  }
+
+  .sched-genre {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    background: rgba(203,77,72,0.12);
+    color: var(--red);
+    border: 1px solid rgba(203,77,72,0.2);
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .sched-headliner {
+    background: rgba(203,77,72,0.06) !important;
+    border-left: 2px solid var(--red);
+  }
+
+  .headliner-badge {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: var(--red);
+    color: var(--cream);
+    padding: 2px 8px;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  /* ── TICKETS ── */
+  #tickets {
+    background: var(--red);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #tickets::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 80px,
+      rgba(237,228,210,0.04) 80px,
+      rgba(237,228,210,0.04) 81px
+    );
+  }
+
+  .tickets-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .ticket-card {
+    background: rgba(13,13,13,0.3);
+    border: 1px solid rgba(237,228,210,0.15);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s, transform 0.2s;
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  }
+
+  .ticket-card:hover { background: rgba(13,13,13,0.5); transform: translateY(-4px); }
+
+  .ticket-card.featured {
+    background: var(--black);
+    border-color: rgba(237,228,210,0.4);
+  }
+
+  .ticket-tier {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(237,228,210,0.6);
+    margin-bottom: 12px;
+  }
+
+  .ticket-price {
+    font-family: 'Ultra', serif;
+    font-size: 50px;
+    line-height: 1;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+
+  .ticket-price sup { font-size: 24px; vertical-align: super; }
+
+  .ticket-desc {
+    font-size: 15px;
+    opacity: 0.7;
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .ticket-perks {
+    list-style: none;
+    margin-bottom: 32px;
+  }
+
+  .ticket-perks li {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(237,228,210,0.08);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ticket-perks li::before {
+    content: '✓';
+    color: var(--red);
+    font-weight: bold;
+  }
+
+  .ticket-card.featured .ticket-perks li::before { color: #4ade80; }
+
+  .ticket-featured-badge {
+    position: absolute;
+    top: 0;
+    right: 24px;
+    background: var(--cream);
+    color: var(--black);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+    padding-bottom: 16px;
+  }
+
+  /* ── VENDORS ── */
+  #vendors {
+    background: var(--black);
+  }
+
+  .vendors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  .vendor-card {
+    background: #111;
+    padding: 32px 24px;
+    border: 1px solid rgba(237,228,210,0.06);
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .vendor-card:hover {
+    border-color: rgba(237,228,210,0.2);
+    background: #161616;
+  }
+
+  .vendor-category {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 10px;
+  }
+
+  .vendor-name {
+    font-family: 'Ultra', serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: var(--cream);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .vendor-desc {
+    font-size: 13px;
+    opacity: 0.6;
+    line-height: 1.6;
+  }
+
+  .vendor-empty {
+    border-style: dashed;
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 140px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .vendor-empty:hover { opacity: 0.8; }
+
+  .vendor-empty-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+
+  .vendor-empty-icon { font-size: 24px; margin-bottom: 8px; opacity: 0.3; }
+
+  /* ── SPONSORS ── */
+  #sponsors {
+    background: #0a0a0a;
+    border-top: 1px solid rgba(237,228,210,0.06);
+  }
+
+  .sponsors-tiers { display: flex; flex-direction: column; gap: 60px; }
+
+  .sponsor-tier-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(237,228,210,0.3);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sponsor-tier-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(237,228,210,0.08);
+  }
+
+  .sponsors-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .sponsor-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 40px;
+    background: #111;
+    border: 1px solid rgba(237,228,210,0.08);
+    font-family: 'Ultra', serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(237,228,210,0.4);
+    transition: all 0.2s;
+    min-width: 180px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .sponsor-logo:hover {
+    border-color: rgba(237,228,210,0.3);
+    color: rgba(237,228,210,0.8);
+  }
+
+  .sponsor-logo.presenting {
+    min-width: 260px;
+    padding: 32px 60px;
+    font-size: 20px;
+    border-color: rgba(203,77,72,0.3);
+    color: rgba(237,228,210,0.7);
+  }
+
+  .sponsor-empty {
+    border-style: dashed;
+    opacity: 0.35;
+    cursor: pointer;
+    min-width: 160px;
+    padding: 24px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: rgba(237,228,210,0.4);
+    transition: opacity 0.2s;
+  }
+
+  .sponsor-empty:hover { opacity: 0.6; }
+
+  /* ── INFO SECTION ── */
+  #info {
+    background: var(--teal);
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .info-card {
+    background: rgba(237,228,210,0.06);
+    padding: 40px;
+    border: 1px solid rgba(237,228,210,0.1);
+  }
+
+  .info-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .info-title {
+    font-family: 'Ultra', serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+
+  .info-content {
+    font-size: 15px;
+    opacity: 0.8;
+    line-height: 1.7;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #050505;
+    padding: 60px 0 32px;
+    border-top: 1px solid rgba(237,228,210,0.06);
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand-name {
+    font-family: 'Ultra', serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .footer-brand-name span { color: var(--red); }
+
+  .footer-tagline {
+    font-size: 14px;
+    opacity: 0.5;
+    line-height: 1.7;
+    max-width: 340px;
+  }
+
+  .footer-col-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.4;
+    margin-bottom: 20px;
+  }
+
+  .footer-links { list-style: none; }
+
+  .footer-links li { margin-bottom: 10px; }
+
+  .footer-links a {
+    font-size: 15px;
+    color: rgba(237,228,210,0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--red); }
+
+  .footer-bottom {
+    padding-top: 28px;
+    border-top: 1px solid rgba(237,228,210,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: gap;
+    gap: 16px;
+  }
+
+  .footer-copy {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    opacity: 0.35;
+  }
+
+  .footer-fire {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.35;
+  }
+
+  /* ── TICKER TAPE ── */
+  .ticker-wrap {
+    background: var(--red);
+    overflow: hidden;
+    padding: 14px 0;
+    border-top: 1px solid rgba(237,228,210,0.1);
+    border-bottom: 1px solid rgba(237,228,210,0.1);
+  }
+
+  .ticker-content {
+    display: flex;
+    animation: ticker 40s linear infinite;
+    white-space: nowrap;
+  }
+
+  .ticker-item {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cream);
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .ticker-item::after {
+    content: '★';
+    color: rgba(237,228,210,0.4);
+  }
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── COUNTDOWN ── */
+  .countdown-wrap {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    margin-top: 48px;
+    animation: fadeUp 0.8s 0.55s ease both;
+  }
+
+  .countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+  }
+
+  .countdown-num {
+    font-family: 'Ultra', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1;
+    color: var(--cream);
+    background: rgba(237,228,210,0.05);
+    border: 1px solid rgba(237,228,210,0.1);
+    padding: 14px 18px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .countdown-num::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: rgba(237,228,210,0.08);
+  }
+
+  .countdown-num.tick {
+    background: rgba(203,77,72,0.12);
+  }
+
+  .countdown-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.4;
+    margin-top: 8px;
+  }
+
+  .countdown-sep {
+    font-family: 'Ultra', serif;
+    font-size: clamp(32px, 5vw, 56px);
+    color: var(--red);
+    opacity: 0.5;
+    align-self: flex-start;
+    padding-top: 14px;
+    line-height: 1;
+  }
+
+  .countdown-event-over {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+    padding: 20px;
+  }
+
+  /* ── 2025 ARCHIVE BAR ── */
+  .archive-bar {
+    background: #111;
+    border-bottom: 1px solid rgba(237,228,210,0.07);
+    padding: 16px 0;
+  }
+
+  .archive-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .archive-bar-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .archive-bar-text strong {
+    color: var(--cream);
+    opacity: 1;
+    font-size: 14px;
+  }
+
+  .archive-links {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .archive-link {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(237,228,210,0.45);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .archive-link:hover {
+    color: var(--cream);
+    border-color: rgba(237,228,210,0.3);
+  }
+
+  .archive-link.highlight {
+    color: rgba(203,77,72,0.8);
+  }
+
+  .archive-link.highlight:hover {
+    color: var(--red);
+    border-color: var(--red);
+  }
+
+  /* ── ADMIN EDIT HINTS ── */
+  .edit-hint {
+    display: none;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .container { padding: 0 20px; }
+    .cause-grid { grid-template-columns: 1fr; gap: 40px; }
+    .artists-grid { grid-template-columns: 1fr; }
+    .artist-card.featured { grid-column: span 1; aspect-ratio: 3/4; }
+    .tickets-grid { grid-template-columns: 1fr; }
+    .vendors-grid { grid-template-columns: 1fr 1fr; }
+    .info-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    Riviera Beach<br><span>Music Fest</span> · 2026
+  </div>
+  <ul class="nav-links">
+    <li><a href="#lineup">Lineup</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#cause">Our Cause</a></li>
+    <li><a href="#vendors">Vendors</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
+    <li><a href="#info">Info</a></li>
+    <li><a href="#tickets" class="nav-cta">Get Tickets</a></li>
+  </ul>
+</nav>
+
+<!-- 2025 ARCHIVE BAR -->
+<div class="archive-bar">
+  <div class="archive-bar-inner">
+    <div class="archive-bar-text">
+      <span>📁</span>
+      <span>Looking for the <strong>2025 Festival</strong> information?</span>
+    </div>
+    <div class="archive-links">
+      <a href="https://rbvfc13.com/rbmf/" target="_blank" class="archive-link">2025 Event Page</a>
+      <a href="https://rbvfc13.com/rbmf/artist-lineup/" target="_blank" class="archive-link">2025 Artist Lineup</a>
+      <a href="https://rbvfc13.com/rbmf/parking/" target="_blank" class="archive-link">2025 Parking Info</a>
+      <a href="https://rbvfc13.com/rbmf/" target="_blank" class="archive-link highlight">→ Visit 2025 Archive</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-stripes"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Presented by Riviera Beach Volunteer Fire Co. #13</div>
+    <h1 class="hero-title">
+      Riviera<br>
+      <span class="line-red">Beach</span><br>
+      Music Fest
+    </h1>
+    <p class="hero-subtitle">Pasadena, Maryland · AA County</p>
+    <div class="hero-date-strip">
+      <div class="hero-date-item">
+        <div class="hero-date-label">Date</div>
+        <div class="hero-date-value">SAT, OCT 10</div>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-date-item">
+        <div class="hero-date-label">Year</div>
+        <div class="hero-date-value">2026</div>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-date-item">
+        <div class="hero-date-label">Location</div>
+        <div class="hero-date-value">Riviera Beach</div>
+      </div>
+    </div>
+    <!-- COUNTDOWN -->
+    <div class="countdown-wrap" id="countdown">
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-days">000</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-hours">00</div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-mins">00</div>
+        <div class="countdown-label">Mins</div>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-secs">00</div>
+        <div class="countdown-label">Secs</div>
+      </div>
+    </div>
+
+    <div class="hero-buttons">
+      <a href="#tickets" class="btn-primary">Get Tickets</a>
+      <a href="#lineup" class="btn-outline">See Lineup</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-content">
+    <div class="ticker-item">Live Music</div>
+    <div class="ticker-item">Local Food Vendors</div>
+    <div class="ticker-item">Supporting RBVFC #13</div>
+    <div class="ticker-item">Sat Oct 10, 2026</div>
+    <div class="ticker-item">Riviera Beach, MD</div>
+    <div class="ticker-item">All Ages Welcome</div>
+    <div class="ticker-item">Rain or Shine</div>
+    <div class="ticker-item">Live Music</div>
+    <div class="ticker-item">Local Food Vendors</div>
+    <div class="ticker-item">Supporting RBVFC #13</div>
+    <div class="ticker-item">Sat Oct 10, 2026</div>
+    <div class="ticker-item">Riviera Beach, MD</div>
+    <div class="ticker-item">All Ages Welcome</div>
+    <div class="ticker-item">Rain or Shine</div>
+  </div>
+</div>
+
+<!-- CAUSE -->
+<section id="cause">
+  <div class="container">
+    <div class="cause-grid">
+      <div class="cause-text">
+        <div class="section-label">Our Cause</div>
+        <h2 class="section-title">Supporting<br>Those Who<br>Protect Us</h2>
+        <p>The Riviera Beach Music Fest is a community-driven fundraiser dedicated to supporting the <strong>Riviera Beach Volunteer Fire Company, Station 13</strong> — an all-volunteer fire, rescue, marine, and ambulance company proudly serving AA County since 1931.</p>
+        <p>Every ticket purchased, every vendor booth, and every sponsor dollar goes directly toward equipment, training, and operational costs that keep our volunteer firefighters ready to protect our community around the clock.</p>
+        <p>Come for the music. Stay for the community. Give back to the heroes who give everything.</p>
+        <br>
+        <a href="https://www.rbvfc.com" target="_blank" class="btn-outline">Learn About RBVFC #13</a>
+      </div>
+      <div class="cause-stats">
+        <div class="stat-box">
+          <div class="stat-number">1931<span></span></div>
+          <div class="stat-label">Year Founded</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">100<span>%</span></div>
+          <div class="stat-label">Volunteer</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">24<span>/7</span></div>
+          <div class="stat-label">On Call</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">4<span></span></div>
+          <div class="stat-label">Services: Fire, Rescue,<br>Marine & Ambulance</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINEUP -->
+<section id="lineup">
+  <div class="container">
+    <div class="lineup-header">
+      <div>
+        <div class="section-label">Performing Artists</div>
+        <h2 class="section-title">2026<br>Lineup</h2>
+      </div>
+      <p style="max-width: 320px; font-size: 15px; opacity: 0.6; line-height: 1.7;">Click any artist card to view full bio, music, and social links. More artists to be announced.</p>
+    </div>
+
+    <div class="artists-grid">
+      <!-- Artist 1 - FEATURED (headliner) -->
+      <div class="artist-card featured" onclick="openArtist('artist1')">
+        <div class="artist-placeholder">
+          <div class="icon">♪</div>
+          <div class="artist-placeholder-text">Artist Photo</div>
+        </div>
+        <div class="artist-overlay">
+          <div class="artist-genre">Headliner · Rock / Country</div>
+          <div class="artist-name">Artist Name<br>Goes Here</div>
+          <div class="artist-bio-preview">Bio preview text will appear here when you hover. Add your artist's bio when you set up the site.</div>
+          <div class="artist-social">
+            <span class="social-link">Spotify</span>
+            <span class="social-link">Instagram</span>
+            <span class="social-link">Website</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artist 2 -->
+      <div class="artist-card" onclick="openArtist('artist2')">
+        <div class="artist-placeholder">
+          <div class="icon">♪</div>
+          <div class="artist-placeholder-text">Artist Photo</div>
+        </div>
+        <div class="artist-overlay">
+          <div class="artist-genre">Rock · Blues</div>
+          <div class="artist-name">Band Name</div>
+          <div class="artist-bio-preview">Short preview of this artist's story and sound.</div>
+          <div class="artist-social">
+            <span class="social-link">Spotify</span>
+            <span class="social-link">Facebook</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artist 3 -->
+      <div class="artist-card" onclick="openArtist('artist3')">
+        <div class="artist-placeholder">
+          <div class="icon">♪</div>
+          <div class="artist-placeholder-text">Artist Photo</div>
+        </div>
+        <div class="artist-overlay">
+          <div class="artist-genre">Country · Americana</div>
+          <div class="artist-name">Band Name</div>
+          <div class="artist-bio-preview">A short description of this act's vibe and genre.</div>
+          <div class="artist-social">
+            <span class="social-link">Spotify</span>
+            <span class="social-link">Instagram</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artist 4 -->
+      <div class="artist-card" onclick="openArtist('artist4')">
+        <div class="artist-placeholder">
+          <div class="icon">♪</div>
+          <div class="artist-placeholder-text">Artist Photo</div>
+        </div>
+        <div class="artist-overlay">
+          <div class="artist-genre">Pop · R&B</div>
+          <div class="artist-name">Artist Name</div>
+          <div class="artist-bio-preview">Preview of this artist's sound and story.</div>
+          <div class="artist-social">
+            <span class="social-link">Instagram</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artist 5 -->
+      <div class="artist-card" onclick="openArtist('artist5')">
+        <div class="artist-placeholder">
+          <div class="icon">♪</div>
+          <div class="artist-placeholder-text">Artist Photo</div>
+        </div>
+        <div class="artist-overlay">
+          <div class="artist-genre">Classic Rock</div>
+          <div class="artist-name">Artist Name</div>
+          <div class="artist-bio-preview">Preview of this act's music and story.</div>
+          <div class="artist-social">
+            <span class="social-link">Facebook</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TBA Card -->
+      <div class="artist-card" style="cursor:default;">
+        <div class="artist-placeholder">
+          <div class="icon" style="font-size:28px; font-family:'Ultra', serif; font-weight:400;">?</div>
+          <div class="artist-placeholder-text">More Artists TBA</div>
+        </div>
+        <div class="artist-overlay">
+          <div class="artist-genre">Stay Tuned</div>
+          <div class="artist-name">More TBA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule">
+  <div class="container">
+    <div class="section-label">Day of Show</div>
+    <h2 class="section-title">Schedule</h2>
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Artist / Act</th>
+          <th>Stage</th>
+          <th>Genre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="sched-time">12:00 PM</td>
+          <td>
+            <div class="sched-artist">Gates Open</div>
+            <div class="sched-stage">All Stages</div>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="sched-time">12:30 PM</td>
+          <td>
+            <div class="sched-artist">Opening Act TBA</div>
+            <div class="sched-stage">Main Stage</div>
+          </td>
+          <td><span style="opacity:0.5; font-size:13px;">Main Stage</span></td>
+          <td><span class="sched-genre">TBA</span></td>
+        </tr>
+        <tr>
+          <td class="sched-time">2:00 PM</td>
+          <td>
+            <div class="sched-artist">Band Name TBA</div>
+            <div class="sched-stage">Main Stage</div>
+          </td>
+          <td><span style="opacity:0.5; font-size:13px;">Main Stage</span></td>
+          <td><span class="sched-genre">TBA</span></td>
+        </tr>
+        <tr>
+          <td class="sched-time">3:30 PM</td>
+          <td>
+            <div class="sched-artist">Artist Name TBA</div>
+            <div class="sched-stage">Main Stage</div>
+          </td>
+          <td><span style="opacity:0.5; font-size:13px;">Main Stage</span></td>
+          <td><span class="sched-genre">TBA</span></td>
+        </tr>
+        <tr>
+          <td class="sched-time">5:00 PM</td>
+          <td>
+            <div class="sched-artist">Band Name TBA</div>
+            <div class="sched-stage">Main Stage</div>
+          </td>
+          <td><span style="opacity:0.5; font-size:13px;">Main Stage</span></td>
+          <td><span class="sched-genre">TBA</span></td>
+        </tr>
+        <tr class="sched-headliner">
+          <td class="sched-time">7:00 PM</td>
+          <td>
+            <div class="sched-artist">Headliner TBA <span class="headliner-badge">Headliner</span></div>
+            <div class="sched-stage">Main Stage</div>
+          </td>
+          <td><span style="opacity:0.5; font-size:13px;">Main Stage</span></td>
+          <td><span class="sched-genre">TBA</span></td>
+        </tr>
+        <tr>
+          <td class="sched-time">9:30 PM</td>
+          <td>
+            <div class="sched-artist">Doors Close</div>
+            <div class="sched-stage">All Stages</div>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top: 20px; font-size: 13px; opacity: 0.4; font-family: 'Barlow Condensed'; letter-spacing: 0.1em;">* Schedule subject to change. Check back for updates.</p>
+  </div>
+</section>
+
+<!-- TICKETS -->
+<section id="tickets">
+  <div class="container">
+    <div class="section-label" style="color: rgba(237,228,210,0.6);">Admission</div>
+    <h2 class="section-title">Get Your<br>Tickets</h2>
+    <div class="tickets-grid">
+      <div class="ticket-card">
+        <div class="ticket-tier">General Admission</div>
+        <div class="ticket-price"><sup>$</sup>25</div>
+        <div class="ticket-desc">Full day access to all stages and festival grounds.</div>
+        <ul class="ticket-perks">
+          <li>All-day festival access</li>
+          <li>All stage access</li>
+          <li>Vendor & food areas</li>
+        </ul>
+        <a href="#" class="btn-primary" style="width: 100%; text-align: center; display: block; padding: 16px;">Buy Tickets</a>
+      </div>
+
+      <div class="ticket-card featured">
+        <div class="ticket-featured-badge">Best Value</div>
+        <div class="ticket-tier">VIP</div>
+        <div class="ticket-price"><sup>$</sup>65</div>
+        <div class="ticket-desc">Premium experience with exclusive access and perks.</div>
+        <ul class="ticket-perks">
+          <li>All GA perks included</li>
+          <li>VIP viewing area</li>
+          <li>Complimentary drink ticket</li>
+          <li>Exclusive merch item</li>
+          <li>Early entry (11:30 AM)</li>
+        </ul>
+        <a href="#" class="btn-primary" style="width: 100%; text-align: center; display: block; padding: 16px;">Buy VIP Tickets</a>
+      </div>
+
+      <div class="ticket-card">
+        <div class="ticket-tier">Family Pack</div>
+        <div class="ticket-price"><sup>$</sup>80</div>
+        <div class="ticket-desc">2 adults + up to 3 children (under 12).</div>
+        <ul class="ticket-perks">
+          <li>2 adult GA passes</li>
+          <li>Up to 3 kids free (under 12)</li>
+          <li>Family zone access</li>
+          <li>Save vs. individual tickets</li>
+        </ul>
+        <a href="#" class="btn-primary" style="width: 100%; text-align: center; display: block; padding: 16px;">Buy Family Pack</a>
+      </div>
+    </div>
+    <p style="margin-top: 24px; font-size: 13px; opacity: 0.6; text-align: center;">Children under 5 admitted free. All proceeds support Riviera Beach Volunteer Fire Company #13.</p>
+  </div>
+</section>
+
+<!-- VENDORS -->
+<section id="vendors">
+  <div class="container">
+    <div class="section-label">Food, Drinks & More</div>
+    <h2 class="section-title">Vendors</h2>
+    <div class="vendors-grid">
+      <!-- Populated vendor example -->
+      <div class="vendor-card">
+        <div class="vendor-category">Food</div>
+        <div class="vendor-name">Vendor Name Here</div>
+        <div class="vendor-desc">A short description of what this vendor serves or sells at the festival.</div>
+      </div>
+      <div class="vendor-card">
+        <div class="vendor-category">Drinks</div>
+        <div class="vendor-name">Vendor Name Here</div>
+        <div class="vendor-desc">Craft beer, cocktails, and non-alcoholic beverages for the whole family.</div>
+      </div>
+      <div class="vendor-card">
+        <div class="vendor-category">Food</div>
+        <div class="vendor-name">Vendor Name Here</div>
+        <div class="vendor-desc">Describe the food style, specialty items, or cuisine offered here.</div>
+      </div>
+      <div class="vendor-card">
+        <div class="vendor-category">Merchandise</div>
+        <div class="vendor-name">RBMF Official Merch</div>
+        <div class="vendor-desc">Official festival t-shirts, hats, and commemorative items. All proceeds benefit RBVFC.</div>
+      </div>
+      <div class="vendor-card">
+        <div class="vendor-category">Food</div>
+        <div class="vendor-name">Vendor Name Here</div>
+        <div class="vendor-desc">Description of food or product available at the event.</div>
+      </div>
+      <div class="vendor-card">
+        <div class="vendor-category">Artisan / Craft</div>
+        <div class="vendor-name">Vendor Name Here</div>
+        <div class="vendor-desc">Local artisan goods, handmade items, or specialty products.</div>
+      </div>
+      <!-- Empty slots -->
+      <div class="vendor-card vendor-empty">
+        <div class="vendor-empty-icon">+</div>
+        <div class="vendor-empty-text">Vendor Spot Available</div>
+      </div>
+      <div class="vendor-card vendor-empty">
+        <div class="vendor-empty-icon">+</div>
+        <div class="vendor-empty-text">Vendor Spot Available</div>
+      </div>
+    </div>
+    <div style="margin-top: 40px; padding: 32px; background: rgba(237,228,210,0.04); border: 1px dashed rgba(237,228,210,0.15); text-align: center;">
+      <p style="font-family: 'Barlow Condensed'; font-size: 14px; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.5; margin-bottom: 12px;">Interested in vending at the festival?</p>
+      <a href="mailto:info@rbmusicfest.com" class="btn-outline">Apply to Vendor</a>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section id="sponsors">
+  <div class="container">
+    <div class="section-label">Our Partners</div>
+    <h2 class="section-title">Sponsors</h2>
+    <div class="sponsors-tiers">
+      <div>
+        <div class="sponsor-tier-title">Presenting Sponsor</div>
+        <div class="sponsors-row">
+          <a href="#" class="sponsor-logo presenting">Your Company Name</a>
+          <a href="#" class="sponsor-logo presenting sponsor-empty">Become a Presenting Sponsor</a>
+        </div>
+      </div>
+      <div>
+        <div class="sponsor-tier-title">Gold Sponsors</div>
+        <div class="sponsors-row">
+          <a href="#" class="sponsor-logo">Company Name</a>
+          <a href="#" class="sponsor-logo">Company Name</a>
+          <a href="#" class="sponsor-logo">Company Name</a>
+          <a href="#" class="sponsor-logo sponsor-empty">Your Name Here</a>
+        </div>
+      </div>
+      <div>
+        <div class="sponsor-tier-title">Community Sponsors</div>
+        <div class="sponsors-row">
+          <a href="#" class="sponsor-logo" style="font-size:12px; min-width:140px;">Local Business</a>
+          <a href="#" class="sponsor-logo" style="font-size:12px; min-width:140px;">Local Business</a>
+          <a href="#" class="sponsor-logo" style="font-size:12px; min-width:140px;">Local Business</a>
+          <a href="#" class="sponsor-logo" style="font-size:12px; min-width:140px;">Local Business</a>
+          <a href="#" class="sponsor-logo sponsor-empty" style="font-size:11px; min-width:140px;">Support Us</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 60px; padding: 40px; background: rgba(203,77,72,0.08); border: 1px solid rgba(203,77,72,0.2); text-align: center;">
+      <div class="section-label" style="justify-content: center;">Become a Sponsor</div>
+      <p style="font-size: 16px; opacity: 0.7; max-width: 540px; margin: 0 auto 28px; line-height: 1.7;">Support your community while getting your brand in front of thousands of music fans. Sponsorship packages available at all levels.</p>
+      <a href="mailto:sponsors@rbmusicfest.com" class="btn-primary">View Sponsorship Packages</a>
+    </div>
+  </div>
+</section>
+
+<!-- INFO -->
+<section id="info">
+  <div class="container">
+    <div class="section-label">What to Know</div>
+    <h2 class="section-title">Festival<br>Info</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <div class="info-title">Location</div>
+        <div class="info-content">
+          Riviera Beach Area<br>
+          Pasadena, Maryland<br>
+          Anne Arundel County<br><br>
+          <em style="opacity: 0.6; font-size: 13px;">Exact address and parking details to be announced.</em>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🕐</div>
+        <div class="info-title">Hours</div>
+        <div class="info-content">
+          <strong>Gates Open:</strong> 12:00 PM<br>
+          <strong>VIP Entry:</strong> 11:30 AM<br>
+          <strong>First Performance:</strong> 12:30 PM<br>
+          <strong>Festival Close:</strong> 9:30 PM<br><br>
+          <em style="opacity: 0.6; font-size: 13px;">Rain or Shine · All Ages Welcome</em>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🎟️</div>
+        <div class="info-title">Tickets & Entry</div>
+        <div class="info-content">
+          Tickets available online and at the gate (subject to availability). Children under 5 are free. No re-entry after exit. All sales support RBVFC #13.
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🍺</div>
+        <div class="info-title">Food & Drink</div>
+        <div class="info-content">
+          A variety of local food vendors and licensed bars on site. Outside food and beverages are not permitted. Cash and card accepted at most vendors.
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🚗</div>
+        <div class="info-title">Parking</div>
+        <div class="info-content">
+          Parking details and shuttle information will be announced closer to the event. We encourage carpooling and rideshare to minimize congestion.
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📋</div>
+        <div class="info-title">Policies</div>
+        <div class="info-content">
+          No outside alcohol. No professional cameras without press credentials. Folding chairs welcome. Pet-friendly in designated areas. Full policy list available at gate.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Riviera Beach<br><span>Music Fest</span></div>
+        <p class="footer-tagline">A community music festival benefiting the Riviera Beach Volunteer Fire Company, Station 13 — proudly serving AA County since 1931.</p>
+        <div style="margin-top: 24px; display: flex; gap: 12px;">
+          <a href="#" style="width:36px; height:36px; border: 1px solid rgba(237,228,210,0.15); display:flex; align-items:center; justify-content:center; color: rgba(237,228,210,0.5); text-decoration:none; font-size:14px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--red)'" onmouseout="this.style.borderColor='rgba(237,228,210,0.15)';this.style.color='rgba(237,228,210,0.5)'">f</a>
+          <a href="#" style="width:36px; height:36px; border: 1px solid rgba(237,228,210,0.15); display:flex; align-items:center; justify-content:center; color: rgba(237,228,210,0.5); text-decoration:none; font-size:14px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--red)'" onmouseout="this.style.borderColor='rgba(237,228,210,0.15)';this.style.color='rgba(237,228,210,0.5)'">ig</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#lineup">Artist Lineup</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#tickets">Buy Tickets</a></li>
+          <li><a href="#vendors">Vendors</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#cause">Our Cause</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="mailto:info@rbmusicfest.com">General Info</a></li>
+          <li><a href="mailto:vendors@rbmusicfest.com">Vendor Inquiries</a></li>
+          <li><a href="mailto:sponsors@rbmusicfest.com">Sponsorships</a></li>
+          <li><a href="mailto:press@rbmusicfest.com">Press / Media</a></li>
+          <li><a href="https://www.rbvfc.com" target="_blank">RBVFC Website</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Riviera Beach Music Fest. All rights reserved. Pasadena, MD.</div>
+      <div class="footer-fire">🔥 Benefiting RBVFC Station 13 · Est. 1931</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ARTIST MODAL -->
+<div class="modal-overlay" id="artistModal" onclick="closeModal(event)">
+  <div class="modal" id="modalContent">
+    <button class="modal-close" onclick="closeModalBtn()">✕</button>
+    <div class="modal-header">
+      <div class="modal-header-placeholder" id="modalHeaderText">?</div>
+      <div class="modal-header-overlay"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-genre" id="modalGenre">Genre</div>
+      <div class="modal-name" id="modalName">Artist Name</div>
+      <div class="modal-info-row" id="modalInfoRow"></div>
+      <div class="modal-bio" id="modalBio">Artist bio goes here.</div>
+      <div class="audio-player" id="modalAudio" style="display:none">
+        <div class="audio-label">Sample Track</div>
+        <audio controls id="audioEl"><source src="" type="audio/mpeg"></audio>
+      </div>
+      <div class="modal-links" id="modalLinks"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── ARTIST DATA (plug in your real info here) ──
+const artists = {
+  artist1: {
+    name: "Artist Name\nGoes Here",
+    genre: "Headliner · Rock / Country",
+    bio: "This is where the full artist biography goes. Add the story of this band or artist — where they're from, their musical journey, notable releases, and what makes them special. This text can be as long as needed and will scroll in the modal.",
+    setTime: "7:00 PM – Close",
+    stage: "Main Stage",
+    spotify: "#",
+    instagram: "#",
+    facebook: "#",
+    website: "#",
+    audioUrl: ""
+  },
+  artist2: {
+    name: "Band Name",
+    genre: "Rock · Blues",
+    bio: "Full biography for this act. Replace with real content when you set up the site for the actual festival lineup.",
+    setTime: "5:00 PM – 6:30 PM",
+    stage: "Main Stage",
+    spotify: "#",
+    facebook: "#",
+    audioUrl: ""
+  },
+  artist3: {
+    name: "Band Name",
+    genre: "Country · Americana",
+    bio: "Full biography for this artist. Add their story, influences, and what attendees can expect from their set.",
+    setTime: "3:30 PM – 5:00 PM",
+    stage: "Main Stage",
+    spotify: "#",
+    instagram: "#",
+    audioUrl: ""
+  },
+  artist4: {
+    name: "Artist Name",
+    genre: "Pop · R&B",
+    bio: "Full biography for this artist. Tell their story and what makes them a great addition to the 2026 lineup.",
+    setTime: "2:00 PM – 3:30 PM",
+    stage: "Main Stage",
+    instagram: "#",
+    audioUrl: ""
+  },
+  artist5: {
+    name: "Artist Name",
+    genre: "Classic Rock",
+    bio: "Full biography for this act. Include their history, what they're known for, and what the crowd can expect.",
+    setTime: "12:30 PM – 2:00 PM",
+    stage: "Main Stage",
+    facebook: "#",
+    audioUrl: ""
+  }
+};
+
+function openArtist(id) {
+  const a = artists[id];
+  if (!a) return;
+
+  document.getElementById('modalHeaderText').textContent = a.name.split('\n')[0].substring(0,2).toUpperCase();
+  document.getElementById('modalGenre').textContent = a.genre;
+  document.getElementById('modalName').innerHTML = a.name.replace('\n','<br>');
+  document.getElementById('modalBio').textContent = a.bio;
+
+  // Info row
+  let infoHTML = '';
+  if (a.setTime) infoHTML += `<div class="modal-info-item"><div class="modal-info-label">Set Time</div><div class="modal-info-value">${a.setTime}</div></div>`;
+  if (a.stage) infoHTML += `<div class="modal-info-item"><div class="modal-info-label">Stage</div><div class="modal-info-value">${a.stage}</div></div>`;
+  document.getElementById('modalInfoRow').innerHTML = infoHTML;
+
+  // Links
+  let linksHTML = '';
+  if (a.spotify)   linksHTML += `<a href="${a.spotify}" target="_blank" class="modal-link spotify">Spotify</a>`;
+  if (a.instagram) linksHTML += `<a href="${a.instagram}" target="_blank" class="modal-link instagram">Instagram</a>`;
+  if (a.facebook)  linksHTML += `<a href="${a.facebook}" target="_blank" class="modal-link facebook">Facebook</a>`;
+  if (a.website)   linksHTML += `<a href="${a.website}" target="_blank" class="modal-link website">Website</a>`;
+  document.getElementById('modalLinks').innerHTML = linksHTML;
+
+  // Audio
+  if (a.audioUrl) {
+    document.getElementById('audioEl').src = a.audioUrl;
+    document.getElementById('modalAudio').style.display = 'block';
+  } else {
+    document.getElementById('modalAudio').style.display = 'none';
+  }
+
+  document.getElementById('artistModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('artistModal')) closeModalBtn();
+}
+
+function closeModalBtn() {
+  document.getElementById('artistModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModalBtn();
+});
+
+// ── COUNTDOWN TIMER ──
+(function() {
+  // Festival: Saturday, October 10, 2026, 12:00 PM Eastern
+  const FEST_DATE = new Date('2026-10-10T12:00:00-04:00');
+
+  function pad(n, len) {
+    return String(n).padStart(len || 2, '0');
+  }
+
+  function tick() {
+    const now = new Date();
+    const diff = FEST_DATE - now;
+
+    if (diff <= 0) {
+      document.getElementById('countdown').innerHTML =
+        '<div class="countdown-event-over">The Festival Is Happening Now! 🎶</div>';
+      return;
+    }
+
+    const days  = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins  = Math.floor((diff % 3600000) / 60000);
+    const secs  = Math.floor((diff % 60000) / 1000);
+
+    const setVal = (id, val, len) => {
+      const el = document.getElementById(id);
+      const newVal = pad(val, len || 2);
+      if (el && el.textContent !== newVal) {
+        el.textContent = newVal;
+        el.classList.add('tick');
+        setTimeout(() => el.classList.remove('tick'), 300);
+      }
+    };
+
+    setVal('cd-days',  days,  3);
+    setVal('cd-hours', hours);
+    setVal('cd-mins',  mins);
+    setVal('cd-secs',  secs);
+  }
+
+  tick();
+  setInterval(tick, 1000);
+})();
+
+// ── NAV SCROLL STYLE ──
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  nav.style.borderBottomColor = window.scrollY > 40
+    ? 'rgba(237,228,210,0.12)'
+    : 'rgba(237,228,210,0.08)';
+});
+</script>
+
+</body>
+</html>
