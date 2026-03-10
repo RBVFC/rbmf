@@ -9,8 +9,7 @@ festival:
   year: 2026
   date: "Saturday, October 10, 2026"
   date_iso: "2026-10-10T12:00:00-04:00"
-  gates_open: "12:00 PM"
-  vip_entry: "11:30 AM"
+  gates_open: "11:00 AM"
   close: "9:30 PM"
   location_name: "Riviera Beach Community Park"
   location_address: "131 Meadow Rd, Pasadena, MD 21122"
@@ -30,7 +29,7 @@ brand:
 # Social links
 social:
   facebook: "https://www.facebook.com/rivierabeachvolunteers"
-  instagram: ""
+  instagram: "https://www.instagram.com/rivierabeachvfc13"
 
 # RBVFC details
 rbvfc:
