@@ -2,37 +2,49 @@
 # Edit set times, artist names, stages, and genres here.
 # headliner: true adds the red highlight row
 
-- time: "12:00 PM"
+- time: "10:30 AM"
   artist: "Gates Open"
   stage: "All Areas"
   genre: ""
   headliner: false
 
-- time: "12:30 PM"
+- time: "11:00 AM"
   artist: "Opening Act TBA"
   stage: "Main Stage"
   genre: "TBA"
   headliner: false
 
-- time: "2:00 PM"
+- time: "12:10 PM"
   artist: "Band Name TBA"
   stage: "Main Stage"
   genre: "TBA"
   headliner: false
 
-- time: "3:30 PM"
+- time: "1:40 PM"
   artist: "Artist Name TBA"
   stage: "Main Stage"
   genre: "TBA"
   headliner: false
 
-- time: "5:00 PM"
+- time: "3:10 PM"
   artist: "Band Name TBA"
   stage: "Main Stage"
   genre: "TBA"
   headliner: false
 
-- time: "7:00 PM"
+- time: "4:20 PM"
+  artist: "Band Name TBA"
+  stage: "Main Stage"
+  genre: "TBA"
+  headliner: false
+
+  - time: "5:45 PM"
+  artist: "Band Name TBA"
+  stage: "Main Stage"
+  genre: "TBA"
+  headliner: false
+
+- time: "7:45 PM"
   artist: "Headliner TBA"
   stage: "Main Stage"
   genre: "TBA"
