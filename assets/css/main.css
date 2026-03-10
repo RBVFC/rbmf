@@ -221,50 +221,6 @@ p:last-child { margin-bottom: 0; }
   transition: all 0.3s;
 }
 
-/* ── ARCHIVE BAR ── */
-/*
-.archive-bar {
-  background: var(--black-2);
-  border-bottom: 1px solid rgba(237,228,210,0.07);
-  padding: 13px 0;
-  margin-top: var(--nav-height);
-}
-.archive-bar__inner {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 48px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.archive-bar__text {
-  font-family: var(--font-ui);
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  opacity: 0.5;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.archive-bar__text strong { color: var(--cream); opacity: 1; }
-.archive-bar__links { display: flex; gap: 20px; flex-wrap: wrap; }
-.archive-bar__links a {
-  font-family: var(--font-ui);
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(237,228,210,0.4);
-  border-bottom: 1px solid transparent;
-  padding-bottom: 1px;
-  transition: color 0.2s, border-color 0.2s;
-}
-.archive-bar__links a:hover { color: var(--cream); border-color: rgba(237,228,210,0.3); }
-.archive-bar__links a.highlight { color: rgba(203,77,72,0.75); }
-.archive-bar__links a.highlight:hover { color: var(--red); border-color: var(--red); }
-*/
-
 /* ── PAGE HERO (non-homepage) ── */
 .page-hero {
   padding: calc(var(--nav-height) + 70px) 0 70px;
