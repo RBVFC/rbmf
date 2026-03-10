@@ -1,0 +1,196 @@
+---
+layout: default
+title: ""
+description: "Riviera Beach Music Fest 2026 — A community music festival supporting RBVFC Station 13 in Pasadena, MD. Saturday, October 10, 2026."
+---
+
+<!-- HERO -->
+<section id="hero" style="min-height:100vh;display:grid;place-items:center;position:relative;background:var(--black);overflow:hidden;padding-top:var(--nav-height);">
+  <div style="position:absolute;inset:0;background:repeating-linear-gradient(-55deg,transparent,transparent 60px,rgba(203,77,72,0.025) 60px,rgba(203,77,72,0.025) 61px);"></div>
+  <div style="position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(203,77,72,0.1) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;"></div>
+
+  <div class="container" style="position:relative;z-index:2;text-align:center;padding-top:60px;padding-bottom:60px;">
+
+    <div class="anim-fade-up" style="display:inline-flex;align-items:center;gap:10px;background:rgba(203,77,72,0.13);border:1px solid rgba(203,77,72,0.38);padding:7px 20px;border-radius:100px;font-family:var(--font-ui);font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);margin-bottom:36px;">
+      <span style="width:6px;height:6px;background:var(--red);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0;"></span>
+      Presented by Riviera Beach Volunteer Fire Co. #13
+    </div>
+
+    <h1 class="anim-fade-up anim-delay-1" style="color:var(--cream);margin-bottom:0;">
+      Riviera<br>
+      <span style="color:var(--red);">Beach</span><br>
+      Music Fest
+    </h1>
+
+    <p class="anim-fade-up anim-delay-2" style="font-family:var(--font-ui);font-size:clamp(14px,2.5vw,22px);letter-spacing:0.35em;text-transform:uppercase;color:var(--teal);margin-top:20px;margin-bottom:0;">
+      Pasadena, Maryland · AA County
+    </p>
+
+    <div class="anim-fade-up anim-delay-2" style="display:flex;align-items:center;justify-content:center;gap:28px;margin-top:40px;flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <div style="font-family:var(--font-ui);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;opacity:0.45;margin-bottom:3px;">Date</div>
+        <div style="font-family:var(--font-ui);font-weight:900;font-size:22px;letter-spacing:0.06em;">SAT, OCT 10</div>
+      </div>
+      <div style="width:1px;height:36px;background:rgba(237,228,210,0.18);"></div>
+      <div style="text-align:center;">
+        <div style="font-family:var(--font-ui);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;opacity:0.45;margin-bottom:3px;">Year</div>
+        <div style="font-family:var(--font-ui);font-weight:900;font-size:22px;letter-spacing:0.06em;">{{ site.festival.year }}</div>
+      </div>
+      <div style="width:1px;height:36px;background:rgba(237,228,210,0.18);"></div>
+      <div style="text-align:center;">
+        <div style="font-family:var(--font-ui);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;opacity:0.45;margin-bottom:3px;">Location</div>
+        <div style="font-family:var(--font-ui);font-weight:900;font-size:22px;letter-spacing:0.06em;">Riviera Beach</div>
+      </div>
+    </div>
+
+    <!-- Countdown -->
+    <div class="countdown anim-fade-up anim-delay-3"
+         id="countdown"
+         data-date="{{ site.festival.date_iso }}">
+      <div class="countdown__unit">
+        <div class="countdown__num" id="cd-days">000</div>
+        <div class="countdown__label">Days</div>
+      </div>
+      <div class="countdown__sep">:</div>
+      <div class="countdown__unit">
+        <div class="countdown__num" id="cd-hours">00</div>
+        <div class="countdown__label">Hours</div>
+      </div>
+      <div class="countdown__sep">:</div>
+      <div class="countdown__unit">
+        <div class="countdown__num" id="cd-mins">00</div>
+        <div class="countdown__label">Mins</div>
+      </div>
+      <div class="countdown__sep">:</div>
+      <div class="countdown__unit">
+        <div class="countdown__num" id="cd-secs">00</div>
+        <div class="countdown__label">Secs</div>
+      </div>
+    </div>
+
+    <div class="anim-fade-up anim-delay-4" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="{{ site.festival.ticket_url }}" target="_blank" rel="noopener" class="btn btn--primary">Get Tickets</a>
+      <a href="{{ '/artists/' | relative_url }}" class="btn btn--outline">See Lineup</a>
+    </div>
+
+  </div>
+
+  <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:7px;opacity:0.35;">
+    <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;">Scroll</span>
+    <div style="width:1px;height:38px;background:var(--cream);animation:scrollLine 2s infinite;"></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker__track">
+    {% assign items = "Live Music,Local Food Vendors,Supporting RBVFC #13,Sat Oct 10 2026,Riviera Beach MD,All Ages Welcome,Rain or Shine,Live Music,Local Food Vendors,Supporting RBVFC #13,Sat Oct 10 2026,Riviera Beach MD,All Ages Welcome,Rain or Shine" | split: "," %}
+    {% for item in items %}
+    <div class="ticker__item">{{ item }}</div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- MINI LINEUP PREVIEW -->
+<section class="section">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:20px;">
+      <div>
+        <div class="label">Performing Artists</div>
+        <h2>2026 Lineup</h2>
+      </div>
+      <a href="{{ '/artists/' | relative_url }}" class="btn btn--outline">Full Lineup →</a>
+    </div>
+
+    <div class="artists-grid">
+      {% assign headliners = site.artists | where: "headliner", true %}
+      {% assign others = site.artists | where: "headliner", false %}
+      {% assign sorted_artists = headliners | concat: others %}
+      {% for artist in sorted_artists limit: 6 %}
+      <a href="{{ artist.url | relative_url }}"
+         class="artist-card{% if artist.headliner %} artist-card--featured{% endif %}"
+         style="display:block;">
+        {% if artist.photo %}
+          <img src="{{ artist.photo | relative_url }}" alt="{{ artist.title }}" class="artist-card__photo">
+        {% else %}
+          <div class="artist-card__placeholder">
+            <div class="artist-card__placeholder-icon">♪</div>
+            <div class="artist-card__placeholder-text">Artist Photo</div>
+          </div>
+        {% endif %}
+        <div class="artist-card__overlay">
+          <div class="artist-card__genre">{{ artist.genre }}</div>
+          <div class="artist-card__name">{{ artist.title }}</div>
+          {% if artist.bio_short %}
+          <div class="artist-card__bio-peek">{{ artist.bio_short }}</div>
+          {% endif %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE PREVIEW -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="label">Day of Show</div>
+    <h2 style="margin-bottom:40px;">Schedule</h2>
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Artist / Act</th>
+          <th>Stage</th>
+          <th>Genre</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for slot in site.data.schedule %}
+        <tr{% if slot.headliner %} class="sched-row--headliner"{% endif %}>
+          <td class="sched-time">{{ slot.time }}</td>
+          <td>
+            <div class="sched-artist">
+              {{ slot.artist }}
+              {% if slot.headliner %}<span class="headliner-badge">Headliner</span>{% endif %}
+            </div>
+            {% if slot.stage %}<div class="sched-stage">{{ slot.stage }}</div>{% endif %}
+          </td>
+          <td><span style="font-family:var(--font-ui);font-size:12px;opacity:0.45;">{{ slot.stage }}</span></td>
+          <td>{% if slot.genre != "" %}<span class="sched-genre">{{ slot.genre }}</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p style="margin-top:16px;font-family:var(--font-ui);font-size:12px;opacity:0.38;letter-spacing:0.1em;">* Schedule subject to change.</p>
+  </div>
+</section>
+
+<!-- TICKETS PREVIEW -->
+<section class="section section--red" style="position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(237,228,210,0.035) 80px,rgba(237,228,210,0.035) 81px);pointer-events:none;"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="label label--light">Admission</div>
+    <h2 style="margin-bottom:48px;">Get Your Tickets</h2>
+    <div class="tickets-grid">
+      {% for ticket in site.data.tickets %}
+      <div class="ticket-card{% if ticket.featured %} ticket-card--featured{% endif %}">
+        {% if ticket.badge %}<div class="ticket-badge">{{ ticket.badge }}</div>{% endif %}
+        <div class="ticket-tier">{{ ticket.tier }}</div>
+        <div class="ticket-price"><sup>$</sup>{{ ticket.price }}</div>
+        <p class="ticket-desc">{{ ticket.description }}</p>
+        <ul class="ticket-perks">
+          {% for perk in ticket.perks %}
+          <li>{{ perk }}</li>
+          {% endfor %}
+        </ul>
+        <a href="{{ site.festival.ticket_url }}" target="_blank" rel="noopener"
+           class="btn btn--dark" style="width:100%;text-align:center;display:block;">Buy Tickets</a>
+      </div>
+      {% endfor %}
+    </div>
+    <p style="margin-top:22px;font-size:13px;opacity:0.6;text-align:center;">
+      Children under 5 admitted free. All proceeds support RBVFC Station {{ site.rbvfc.station }}.
+    </p>
+  </div>
+</section>
