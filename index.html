@@ -103,7 +103,9 @@ description: "Riviera Beach Music Fest 2026 — A community music festival suppo
     </div>
 
     <div class="artists-grid">
-      {% assign sorted_artists = site.artists | sort: "headliner" | reverse %}
+      {% assign headliners = site.artists | where: "headliner", true %}
+      {% assign others = site.artists | where: "headliner", false %}
+      {% assign sorted_artists = headliners | concat: others %}
       {% for artist in sorted_artists limit: 6 %}
       <a href="{{ artist.url | relative_url }}"
          class="artist-card{% if artist.headliner %} artist-card--featured{% endif %}"

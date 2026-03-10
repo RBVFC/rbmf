@@ -11,7 +11,9 @@ permalink: /artists/
 <section class="section">
   <div class="container">
     <div class="artists-grid">
-      {% assign sorted_artists = site.artists | sort: "headliner" | reverse %}
+      {% assign headliners = site.artists | where: "headliner", true %}
+      {% assign others = site.artists | where: "headliner", false %}
+      {% assign sorted_artists = headliners | concat: others %}
       {% for artist in sorted_artists %}
       <a href="{{ artist.url | relative_url }}"
          class="artist-card{% if artist.headliner %} artist-card--featured{% endif %}"
