@@ -1,0 +1,73 @@
+title: Riviera Beach Music Fest
+tagline: "Benefiting Riviera Beach Volunteer Fire Company #13"
+description: "A community music festival supporting RBVFC Station 13, proudly serving AA County since 1931."
+url: "https://www.rbmfmd.com"
+baseurl: ""
+
+# Festival Details — edit these each year
+festival:
+  year: 2026
+  date: "Saturday, October 10, 2026"
+  date_iso: "2026-10-10T12:00:00-04:00"
+  gates_open: "12:00 PM"
+  vip_entry: "11:30 AM"
+  close: "9:30 PM"
+  location_name: "Riviera Beach Community Park"
+  location_address: "131 Meadow Rd, Pasadena, MD 21122"
+  ticket_url: "https://rivierabeachvolunteerfire.simpletix.com"
+  email_general: "info@rbmfmd.com"
+  email_vendors: "vendors@rbmfmd.com"
+  email_sponsors: "sponsors@rbmfmd.com"
+  email_press: "press@rbmfmd.com"
+
+# Brand colors (used in config, referenced in CSS vars)
+brand:
+  red: "#cb4d48"
+  cream: "#ede4d2"
+  teal: "#205066"
+  black: "#0d0d0d"
+
+# Social links
+social:
+  facebook: "https://www.facebook.com/rivierabeachvolunteers"
+  instagram: ""
+
+# RBVFC details
+rbvfc:
+  name: "Riviera Beach Volunteer Fire Company"
+  station: "13"
+  founded: 1931
+  county: "Anne Arundel County"
+  website: "https://www.rbvfc13.com"
+  phone: "410-255-1314"
+
+# Jekyll collections
+collections:
+  artists:
+    output: true
+    permalink: /artists/:name/
+  vendors:
+    output: false
+  sponsors:
+    output: false
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "artists"
+    values:
+      layout: "artist"
+  - scope:
+      path: "_pages"
+    values:
+      layout: "page"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
