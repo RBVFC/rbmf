@@ -221,8 +221,8 @@ p:last-child { margin-bottom: 0; }
   transition: all 0.3s;
 }
 
-/*
 /* ── ARCHIVE BAR ── */
+/*
 .archive-bar {
   background: var(--black-2);
   border-bottom: 1px solid rgba(237,228,210,0.07);
