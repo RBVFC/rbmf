@@ -1,0 +1,90 @@
+---
+layout: page
+title: "Festival Info"
+label: "What to Know"
+heading: "Festival Info"
+subheading: "Everything you need to know before you arrive"
+description: "Practical information for attending Riviera Beach Music Fest 2026 — location, hours, parking, tickets, and policies."
+---
+
+<section class="section">
+  <div class="container">
+    <div class="info-grid">
+
+      <div class="info-card">
+        <div class="info-card__icon">📍</div>
+        <div class="info-card__title">Location</div>
+        <p class="info-card__body">
+          {{ site.festival.location_name }}<br>
+          {{ site.festival.location_address }}<br><br>
+          <a href="https://maps.google.com/?q={{ site.festival.location_address | url_encode }}"
+             target="_blank" rel="noopener"
+             style="color:var(--red);font-family:var(--font-ui);font-size:12px;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(203,77,72,0.3);">
+            Open in Maps →
+          </a>
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card__icon">🕐</div>
+        <div class="info-card__title">Hours</div>
+        <p class="info-card__body">
+          <strong>VIP Entry:</strong> {{ site.festival.vip_entry }}<br>
+          <strong>Gates Open:</strong> {{ site.festival.gates_open }}<br>
+          <strong>First Performance:</strong> 12:30 PM<br>
+          <strong>Festival Close:</strong> {{ site.festival.close }}<br><br>
+          <em style="opacity:0.6;font-size:13px;">Rain or Shine · All Ages Welcome</em>
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card__icon">🎟️</div>
+        <div class="info-card__title">Tickets & Entry</div>
+        <p class="info-card__body">
+          Tickets available online and at the gate (subject to availability). Children under 5 are free.
+          No re-entry after exit. All sales support RBVFC Station {{ site.rbvfc.station }}.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card__icon">🍺</div>
+        <div class="info-card__title">Food & Drink</div>
+        <p class="info-card__body">
+          A variety of local food vendors and licensed bars on site. Outside food and beverages
+          are not permitted. Cash and card accepted at most vendors.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card__icon">🚗</div>
+        <div class="info-card__title">Parking</div>
+        <p class="info-card__body">
+          Premium onsite parking available to purchase. Limited street parking for the event.
+          Attendees are encouraged to use the free shuttle bus from local hubs.
+          Streets around the event site will be closed to traffic.<br><br>
+          <em style="opacity:0.6;font-size:13px;">Full parking details to be announced closer to the event.</em>
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card__icon">📋</div>
+        <div class="info-card__title">Policies</div>
+        <p class="info-card__body">
+          No outside alcohol. No professional cameras without press credentials.
+          Folding chairs welcome. Pet-friendly in designated areas only.
+          Full policy list available at the gate.
+        </p>
+      </div>
+
+    </div>
+
+    <div style="margin-top:56px;padding:36px;background:rgba(237,228,210,0.04);border:1px solid rgba(237,228,210,0.1);text-align:center;">
+      <div class="label" style="justify-content:center;">Questions?</div>
+      <p style="font-size:15px;opacity:0.65;margin-bottom:22px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.75;">
+        Can't find what you're looking for? Reach out and we'll get back to you.
+      </p>
+      <a href="mailto:{{ site.festival.email_general }}" class="btn btn--outline">Contact Us</a>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,78 @@
+---
+layout: page
+title: "Sponsors"
+label: "Our Partners"
+heading: "Sponsors"
+subheading: "Thank you to everyone supporting this community event"
+description: "Sponsors of Riviera Beach Music Fest 2026 — supporting RBVFC Station 13."
+---
+
+<section class="section">
+  <div class="container">
+
+    <div class="sponsor-tier">
+      <div class="sponsor-tier__title">Presenting Sponsor</div>
+      <div class="sponsor-row">
+        {% for sponsor in site.data.sponsors.presenting %}
+        <a href="{{ sponsor.url | default: '#' }}"
+           {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}
+           class="sponsor-logo sponsor-logo--presenting">
+          {% if sponsor.logo %}
+            <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" style="max-height:60px;max-width:200px;filter:brightness(0) invert(0.85);">
+          {% else %}
+            {{ sponsor.name }}
+          {% endif %}
+        </a>
+        {% endfor %}
+        <a href="mailto:{{ site.festival.email_sponsors }}" class="sponsor-logo sponsor-logo--presenting sponsor-logo--empty">
+          Become a Presenting Sponsor
+        </a>
+      </div>
+    </div>
+
+    <div class="sponsor-tier">
+      <div class="sponsor-tier__title">Gold Sponsors</div>
+      <div class="sponsor-row">
+        {% for sponsor in site.data.sponsors.gold %}
+        <a href="{{ sponsor.url | default: '#' }}"
+           {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}
+           class="sponsor-logo">
+          {% if sponsor.logo %}
+            <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" style="max-height:44px;max-width:160px;filter:brightness(0) invert(0.85);">
+          {% else %}
+            {{ sponsor.name }}
+          {% endif %}
+        </a>
+        {% endfor %}
+        <a href="mailto:{{ site.festival.email_sponsors }}" class="sponsor-logo sponsor-logo--empty">Your Name Here</a>
+      </div>
+    </div>
+
+    <div class="sponsor-tier">
+      <div class="sponsor-tier__title">Community Sponsors</div>
+      <div class="sponsor-row">
+        {% for sponsor in site.data.sponsors.community %}
+        <a href="{{ sponsor.url | default: '#' }}"
+           {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}
+           class="sponsor-logo" style="font-size:12px;min-width:140px;">
+          {% if sponsor.logo %}
+            <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" style="max-height:36px;max-width:130px;filter:brightness(0) invert(0.85);">
+          {% else %}
+            {{ sponsor.name }}
+          {% endif %}
+        </a>
+        {% endfor %}
+        <a href="mailto:{{ site.festival.email_sponsors }}" class="sponsor-logo sponsor-logo--empty" style="font-size:11px;min-width:140px;">Support Us</a>
+      </div>
+    </div>
+
+    <div style="margin-top:56px;padding:40px;background:rgba(203,77,72,0.07);border:1px solid rgba(203,77,72,0.2);text-align:center;">
+      <div class="label" style="justify-content:center;">Become a Sponsor</div>
+      <p style="font-size:16px;opacity:0.7;max-width:520px;margin:0 auto 26px;line-height:1.75;">
+        Support your community while getting your brand in front of thousands of music fans. Sponsorship packages available at all levels.
+      </p>
+      <a href="mailto:{{ site.festival.email_sponsors }}" class="btn btn--primary">View Sponsorship Packages</a>
+    </div>
+
+  </div>
+</section>

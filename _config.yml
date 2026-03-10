@@ -1,6 +1,6 @@
 title: Riviera Beach Music Fest
-tagline: "Benefiting Riviera Beach Volunteer Fire Company"
-description: "A community music festival supporting the Riviera Beach Volunteer Fire Company, proudly serving Anne Arundel County, MD since 1931."
+tagline: "Benefiting Riviera Beach Volunteer Fire Company #13"
+description: "A community music festival supporting RBVFC Station 13, proudly serving AA County since 1931."
 url: "https://www.rbmfmd.com"
 baseurl: ""
 
@@ -9,7 +9,8 @@ festival:
   year: 2026
   date: "Saturday, October 10, 2026"
   date_iso: "2026-10-10T12:00:00-04:00"
-  gates_open: "11:00 AM"
+  gates_open: "12:00 PM"
+  vip_entry: "11:30 AM"
   close: "9:30 PM"
   location_name: "Riviera Beach Community Park"
   location_address: "131 Meadow Rd, Pasadena, MD 21122"
@@ -19,7 +20,7 @@ festival:
   email_sponsors: "sponsors@rbmfmd.com"
   email_press: "press@rbmfmd.com"
 
-# Brand colors (used in config, referenced in CSS vars)
+# Brand colors
 brand:
   red: "#cb4d48"
   cream: "#ede4d2"
@@ -29,7 +30,7 @@ brand:
 # Social links
 social:
   facebook: "https://www.facebook.com/rivierabeachvolunteers"
-  instagram: "https://www.instagram.com/rivierabeachvfc13"
+  instagram: ""
 
 # RBVFC details
 rbvfc:
@@ -40,31 +41,22 @@ rbvfc:
   website: "https://www.rbvfc13.com"
   phone: "410-255-1314"
 
-# Jekyll collections
+# Jekyll collections — artists only
 collections:
   artists:
     output: true
     permalink: /artists/:name/
-  vendors:
-    output: false
-  sponsors:
-    output: false
 
-# Default front matter
+# Default layouts
 defaults:
   - scope:
       path: ""
       type: "artists"
     values:
       layout: "artist"
-  - scope:
-      path: "_pages"
-    values:
-      layout: "page"
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
 permalink: pretty
 exclude:
   - README.md
