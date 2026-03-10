@@ -1,7 +1,7 @@
 # _data/tickets.yml
 
 - tier: "General Admission"
-  price: 25
+  price: 45
   description: "Full day access to all stages and festival grounds."
   featured: false
   perks:
@@ -9,24 +9,22 @@
     - "All stage access"
     - "Vendor & food areas"
 
-- tier: "VIP"
-  price: 65
-  description: "Premium experience with exclusive access and perks."
+- tier: "Early Bird"
+  price: 30
+  description: "Early bird ticket pricing."
   featured: true
   badge: "Best Value"
   perks:
-    - "All GA perks included"
-    - "VIP viewing area"
-    - "Complimentary drink ticket"
-    - "Exclusive merch item"
-    - "Early entry (11:30 AM)"
+    - "Early bird discount pricing"
+    - "All-day festival access"
+    - "All stage access"
+    - "Vendor & food areas"
 
 - tier: "Family Pack"
-  price: 80
-  description: "2 adults + up to 3 children (under 12)."
+  price: 100
+  description: "2 adults + up to 3 children (under 13)."
   featured: false
   perks:
     - "2 adult GA passes"
-    - "Up to 3 kids free (under 12)"
-    - "Family zone access"
+    - "Up to 3 kids (under 13) included"
     - "Save vs. individual tickets"
