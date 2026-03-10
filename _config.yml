@@ -39,6 +39,7 @@ rbvfc:
   county: "Anne Arundel County"
   website: "https://www.rbvfc13.com"
   phone: "410-255-1314"
+  donate_url: "https://www.zeffy.com/en-US/donation-form/help-support-rbvfc"
 
 # Jekyll collections — artists only
 collections:
