@@ -160,7 +160,7 @@ p:last-child { margin-bottom: 0; }
   align-items: center;
   justify-content: space-between;
   padding: 0 48px;
-  background: rgba(13,13,13,0.93);
+  background: var(--red);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(237,228,210,0.08);
   transition: border-color 0.3s;
