@@ -1,0 +1,77 @@
+---
+layout: page
+title: "Artists"
+label: "2026 Lineup"
+heading: "The Artists"
+subheading: "Click any artist to view their full bio, music & social links"
+description: "Meet the artists performing at Riviera Beach Music Fest 2026 in Pasadena, MD."
+permalink: /artists/
+---
+
+<section class="section">
+  <div class="container">
+    <div class="artists-grid">
+      {% assign headliners = site.artists | where: "headliner", true %}
+      {% assign others = site.artists | where: "headliner", false %}
+      {% assign sorted_artists = headliners | concat: others %}
+      {% for artist in sorted_artists %}
+      <a href="{{ artist.url | relative_url }}"
+         class="artist-card{% if artist.headliner %} artist-card--featured{% endif %}"
+         style="display:block;">
+        {% if artist.photo %}
+          <img src="{{ artist.photo | relative_url }}" alt="{{ artist.title }}" class="artist-card__photo">
+        {% else %}
+          <div class="artist-card__placeholder">
+            <div class="artist-card__placeholder-icon">♪</div>
+            <div class="artist-card__placeholder-text">Artist Photo</div>
+          </div>
+        {% endif %}
+        <div class="artist-card__overlay">
+          <div class="artist-card__genre">{{ artist.genre }}</div>
+          <div class="artist-card__name">{{ artist.title }}</div>
+          {% if artist.bio_short %}
+          <div class="artist-card__bio-peek">{{ artist.bio_short }}</div>
+          {% endif %}
+        </div>
+      </a>
+      {% endfor %}
+
+      <!-- TBA slot -->
+      <div class="artist-card" style="cursor:default;">
+        <div class="artist-card__placeholder">
+          <div class="artist-card__placeholder-icon" style="font-family:var(--font-display);font-size:26px;">?</div>
+          <div class="artist-card__placeholder-text">More Artists TBA</div>
+        </div>
+        <div class="artist-card__overlay">
+          <div class="artist-card__genre">Stay Tuned</div>
+          <div class="artist-card__name">More TBA</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:60px;text-align:center;">
+      <div class="label" style="justify-content:center;">Day of Show</div>
+      <h2 style="margin-bottom:36px;">Schedule</h2>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Time</th><th>Artist / Act</th><th>Stage</th><th>Genre</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for slot in site.data.schedule %}
+          <tr{% if slot.headliner %} class="sched-row--headliner"{% endif %}>
+            <td class="sched-time">{{ slot.time }}</td>
+            <td>
+              <div class="sched-artist">{{ slot.artist }}{% if slot.headliner %}<span class="headliner-badge">Headliner</span>{% endif %}</div>
+              {% if slot.stage %}<div class="sched-stage">{{ slot.stage }}</div>{% endif %}
+            </td>
+            <td><span style="font-family:var(--font-ui);font-size:12px;opacity:0.45;">{{ slot.stage }}</span></td>
+            <td>{% if slot.genre != "" %}<span class="sched-genre">{{ slot.genre }}</span>{% endif %}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
