@@ -1,0 +1,85 @@
+{% include head.html %}
+{% include nav.html %}
+{% include archive-bar.html %}
+
+<main class="artist-detail" id="main-content">
+  <div class="container">
+
+    <a href="{{ '/artists/' | relative_url }}" class="back-link">Back to All Artists</a>
+
+    <div class="artist-detail__hero">
+
+      <div class="artist-detail__media">
+        {% if page.photo %}
+          <img src="{{ page.photo | relative_url }}"
+               alt="Photo of {{ page.title }}"
+               class="artist-detail__photo">
+        {% else %}
+          <div class="artist-detail__photo-placeholder">
+            {{ page.title | slice: 0, 2 | upcase }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="artist-detail__info">
+        <div class="label">{{ page.genre }}</div>
+        <h1 class="artist-detail__name">{{ page.title }}</h1>
+
+        <div class="artist-detail__meta">
+          {% if page.set_time %}
+          <div class="artist-detail__meta-item">
+            <span class="artist-detail__meta-label">Set Time</span>
+            <span class="artist-detail__meta-value">{{ page.set_time }}</span>
+          </div>
+          {% endif %}
+          {% if page.stage %}
+          <div class="artist-detail__meta-item">
+            <span class="artist-detail__meta-label">Stage</span>
+            <span class="artist-detail__meta-value">{{ page.stage }}</span>
+          </div>
+          {% endif %}
+          {% if page.hometown %}
+          <div class="artist-detail__meta-item">
+            <span class="artist-detail__meta-label">From</span>
+            <span class="artist-detail__meta-value">{{ page.hometown }}</span>
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="artist-detail__bio">
+          {{ content }}
+        </div>
+
+        {% if page.audio %}
+        <div class="artist-audio">
+          <div class="artist-audio__label">Sample Track</div>
+          <audio controls>
+            <source src="{{ page.audio | relative_url }}" type="audio/mpeg">
+          </audio>
+        </div>
+        {% endif %}
+
+        <div class="artist-detail__links">
+          {% if page.spotify %}
+          <a href="{{ page.spotify }}" target="_blank" rel="noopener" class="artist-link artist-link--spotify">Spotify</a>
+          {% endif %}
+          {% if page.instagram %}
+          <a href="{{ page.instagram }}" target="_blank" rel="noopener" class="artist-link artist-link--instagram">Instagram</a>
+          {% endif %}
+          {% if page.facebook %}
+          <a href="{{ page.facebook }}" target="_blank" rel="noopener" class="artist-link artist-link--facebook">Facebook</a>
+          {% endif %}
+          {% if page.youtube %}
+          <a href="{{ page.youtube }}" target="_blank" rel="noopener" class="artist-link artist-link--youtube">YouTube</a>
+          {% endif %}
+          {% if page.website %}
+          <a href="{{ page.website }}" target="_blank" rel="noopener" class="artist-link artist-link--website">Website</a>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+{% include footer.html %}

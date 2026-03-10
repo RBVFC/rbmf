@@ -1,0 +1,21 @@
+{% include head.html %}
+{% include nav.html %}
+{% include archive-bar.html %}
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <div class="label">{{ page.label | default: page.title }}</div>
+      <h1>{{ page.heading | default: page.title }}</h1>
+      {% if page.subheading %}
+      <p class="page-hero__sub">{{ page.subheading }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+  {{ content }}
+</main>
+
+{% include footer.html %}

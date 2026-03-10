@@ -1,0 +1,33 @@
+# _data/sponsors.yml
+# Three tiers: presenting, gold, community
+# Each sponsor: name, url (optional), logo (optional path to /assets/images/sponsors/)
+
+presenting:
+  - name: "Your Company Name"
+    url: ""
+    logo: ""
+
+gold:
+  - name: "Company Name"
+    url: ""
+    logo: ""
+  - name: "Company Name"
+    url: ""
+    logo: ""
+  - name: "Company Name"
+    url: ""
+    logo: ""
+
+community:
+  - name: "Local Business"
+    url: ""
+    logo: ""
+  - name: "Local Business"
+    url: ""
+    logo: ""
+  - name: "Local Business"
+    url: ""
+    logo: ""
+  - name: "Local Business"
+    url: ""
+    logo: ""

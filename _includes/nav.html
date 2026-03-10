@@ -1,0 +1,18 @@
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <a href="{{ '/' | relative_url }}" class="site-nav__logo">
+    Riviera Beach<br><span>Music Fest</span> · {{ site.festival.year }}
+  </a>
+
+  <ul class="site-nav__links" role="list">
+    <li><a href="{{ '/artists/' | relative_url }}">Artists</a></li>
+    <li><a href="{{ '/vendors/' | relative_url }}">Vendors</a></li>
+    <li><a href="{{ '/sponsors/' | relative_url }}">Sponsors</a></li>
+    <li><a href="{{ '/our-cause/' | relative_url }}">Our Cause</a></li>
+    <li><a href="{{ '/info/' | relative_url }}">Info</a></li>
+    <li><a href="{{ site.festival.ticket_url }}" class="nav-cta" target="_blank" rel="noopener">Get Tickets</a></li>
+  </ul>
+
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>

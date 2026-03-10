@@ -1,0 +1,45 @@
+# _data/schedule.yml
+# Edit set times, artist names, stages, and genres here.
+# headliner: true adds the red highlight row
+
+- time: "12:00 PM"
+  artist: "Gates Open"
+  stage: "All Areas"
+  genre: ""
+  headliner: false
+
+- time: "12:30 PM"
+  artist: "Opening Act TBA"
+  stage: "Main Stage"
+  genre: "TBA"
+  headliner: false
+
+- time: "2:00 PM"
+  artist: "Band Name TBA"
+  stage: "Main Stage"
+  genre: "TBA"
+  headliner: false
+
+- time: "3:30 PM"
+  artist: "Artist Name TBA"
+  stage: "Main Stage"
+  genre: "TBA"
+  headliner: false
+
+- time: "5:00 PM"
+  artist: "Band Name TBA"
+  stage: "Main Stage"
+  genre: "TBA"
+  headliner: false
+
+- time: "7:00 PM"
+  artist: "Headliner TBA"
+  stage: "Main Stage"
+  genre: "TBA"
+  headliner: true
+
+- time: "9:30 PM"
+  artist: "Doors Close"
+  stage: "All Areas"
+  genre: ""
+  headliner: false

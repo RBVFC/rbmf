@@ -1,0 +1,67 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__top">
+
+      <div>
+        <div class="site-footer__brand-name">
+          Riviera Beach<br><span>Music Fest</span>
+        </div>
+        <p class="site-footer__tagline">
+          A community music festival benefiting the {{ site.rbvfc.name }},
+          Station {{ site.rbvfc.station }} — proudly serving {{ site.rbvfc.county }} since {{ site.rbvfc.founded }}.
+        </p>
+        <div style="margin-top:20px; display:flex; gap:10px;">
+          {% if site.social.facebook != "" %}
+          <a href="{{ site.social.facebook }}" target="_blank" rel="noopener" aria-label="Facebook"
+             style="width:34px;height:34px;border:1px solid rgba(237,228,210,0.14);display:flex;align-items:center;justify-content:center;font-family:var(--font-ui);font-size:12px;color:rgba(237,228,210,0.45);transition:all 0.2s;"
+             onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--red)'"
+             onmouseout="this.style.borderColor='rgba(237,228,210,0.14)';this.style.color='rgba(237,228,210,0.45)'">FB</a>
+          {% endif %}
+          {% if site.social.instagram != "" %}
+          <a href="{{ site.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram"
+             style="width:34px;height:34px;border:1px solid rgba(237,228,210,0.14);display:flex;align-items:center;justify-content:center;font-family:var(--font-ui);font-size:12px;color:rgba(237,228,210,0.45);transition:all 0.2s;"
+             onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--red)'"
+             onmouseout="this.style.borderColor='rgba(237,228,210,0.14)';this.style.color='rgba(237,228,210,0.45)'">IG</a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div>
+        <div class="site-footer__col-title">Navigation</div>
+        <ul class="site-footer__links">
+          <li><a href="{{ '/artists/' | relative_url }}">Artist Lineup</a></li>
+          <li><a href="{{ '/vendors/' | relative_url }}">Vendors</a></li>
+          <li><a href="{{ '/sponsors/' | relative_url }}">Sponsors</a></li>
+          <li><a href="{{ '/our-cause/' | relative_url }}">Our Cause</a></li>
+          <li><a href="{{ '/info/' | relative_url }}">Festival Info</a></li>
+          <li><a href="{{ site.festival.ticket_url }}" target="_blank" rel="noopener">Buy Tickets</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="site-footer__col-title">Contact</div>
+        <ul class="site-footer__links">
+          <li><a href="mailto:{{ site.festival.email_general }}">General Info</a></li>
+          <li><a href="mailto:{{ site.festival.email_vendors }}">Vendor Inquiries</a></li>
+          <li><a href="mailto:{{ site.festival.email_sponsors }}">Sponsorships</a></li>
+          <li><a href="mailto:{{ site.festival.email_press }}">Press / Media</a></li>
+          <li><a href="{{ site.rbvfc.website }}" target="_blank" rel="noopener">RBVFC Website</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="site-footer__copy">
+        © {{ site.festival.year }} {{ site.title }}. All rights reserved. Pasadena, MD.
+      </div>
+      <div class="site-footer__fire">
+        🔥 Benefiting RBVFC Station {{ site.rbvfc.station }} · Est. {{ site.rbvfc.founded }}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

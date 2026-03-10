@@ -1,0 +1,40 @@
+# _data/vendors.yml
+# Add or remove vendor entries here.
+# Each vendor needs: name, category, description
+# Optional: website, instagram, facebook
+
+- name: "Vendor Name Here"
+  category: "Food"
+  description: "A short description of what this vendor serves or sells at the festival."
+  website: ""
+  instagram: ""
+
+- name: "Vendor Name Here"
+  category: "Drinks"
+  description: "Craft beer, cocktails, and non-alcoholic beverages for the whole family."
+  website: ""
+  instagram: ""
+
+- name: "Vendor Name Here"
+  category: "Food"
+  description: "Describe the food style, specialty items, or cuisine offered here."
+  website: ""
+  instagram: ""
+
+- name: "RBMF Official Merch"
+  category: "Merchandise"
+  description: "Official festival t-shirts, hats, and commemorative items. All proceeds benefit RBVFC."
+  website: ""
+  instagram: ""
+
+- name: "Vendor Name Here"
+  category: "Food"
+  description: "Description of food or product available at the event."
+  website: ""
+  instagram: ""
+
+- name: "Vendor Name Here"
+  category: "Artisan / Craft"
+  description: "Local artisan goods, handmade items, or specialty products."
+  website: ""
+  instagram: ""
