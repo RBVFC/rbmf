@@ -31,9 +31,9 @@ description: "Sponsors of Riviera Beach Music Fest 2026 — supporting RBVFC Sta
     </div>
 
     <div class="sponsor-tier">
-      <div class="sponsor-tier__title">Gold Sponsors</div>
+      <div class="sponsor-tier__title">Main Stage Sponsors</div>
       <div class="sponsor-row">
-        {% for sponsor in site.data.sponsors.gold %}
+        {% for sponsor in site.data.sponsors.main-stage %}
         <a href="{{ sponsor.url | default: '#' }}"
            {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}
            class="sponsor-logo">
@@ -44,14 +44,68 @@ description: "Sponsors of Riviera Beach Music Fest 2026 — supporting RBVFC Sta
           {% endif %}
         </a>
         {% endfor %}
-        <a href="mailto:{{ site.festival.email_sponsors }}" class="sponsor-logo sponsor-logo--empty">Your Name Here</a>
+        <a href="mailto:{{ site.festival.email_sponsors }}" class="sponsor-logo sponsor-logo--empty">Become a Sponsor</a>
       </div>
     </div>
 
+     <div class="sponsor-tier">
+      <div class="sponsor-tier__title">Stage Sponsors</div>
+      <div class="sponsor-row">
+        {% for sponsor in site.data.sponsors.stage %}
+        <a href="{{ sponsor.url | default: '#' }}"
+           {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}
+           class="sponsor-logo">
+          {% if sponsor.logo %}
+            <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" style="max-height:44px;max-width:160px;filter:brightness(0) invert(0.85);">
+          {% else %}
+            {{ sponsor.name }}
+          {% endif %}
+        </a>
+        {% endfor %}
+        <a href="mailto:{{ site.festival.email_sponsors }}" class="sponsor-logo sponsor-logo--empty">Become a Sponsor</a>
+      </div>
+    </div>
+
+   <div class="sponsor-tier">
+      <div class="sponsor-tier__title">Bar Sponsors</div>
+      <div class="sponsor-row">
+        {% for sponsor in site.data.sponsors.bar %}
+        <a href="{{ sponsor.url | default: '#' }}"
+           {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}
+           class="sponsor-logo">
+          {% if sponsor.logo %}
+            <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" style="max-height:44px;max-width:160px;filter:brightness(0) invert(0.85);">
+          {% else %}
+            {{ sponsor.name }}
+          {% endif %}
+        </a>
+        {% endfor %}
+        <a href="mailto:{{ site.festival.email_sponsors }}" class="sponsor-logo sponsor-logo--empty">Become a Sponsor</a>
+      </div>
+    </div>
+    
     <div class="sponsor-tier">
       <div class="sponsor-tier__title">Community Sponsors</div>
       <div class="sponsor-row">
         {% for sponsor in site.data.sponsors.community %}
+        <a href="{{ sponsor.url | default: '#' }}"
+           {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}
+           class="sponsor-logo" style="font-size:12px;min-width:140px;">
+          {% if sponsor.logo %}
+            <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" style="max-height:36px;max-width:130px;filter:brightness(0) invert(0.85);">
+          {% else %}
+            {{ sponsor.name }}
+          {% endif %}
+        </a>
+        {% endfor %}
+        <a href="mailto:{{ site.festival.email_sponsors }}" class="sponsor-logo sponsor-logo--empty" style="font-size:11px;min-width:140px;">Become a Sponsor</a>
+      </div>
+    </div>
+
+    <div class="sponsor-tier">
+      <div class="sponsor-tier__title">Supporting Sponsors</div>
+      <div class="sponsor-row">
+        {% for sponsor in site.data.sponsors.supporting %}
         <a href="{{ sponsor.url | default: '#' }}"
            {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}
            class="sponsor-logo" style="font-size:12px;min-width:140px;">
