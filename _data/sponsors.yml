@@ -1,16 +1,16 @@
 # _data/sponsors.yml
-# Three tiers: presenting, gold, community
+# Sponsor tiers: presenting, main stage, stage, bar, community, supporting
 # Each sponsor: name, url (optional), logo (optional path to /assets/images/sponsors/)
 
 presenting:
+  - name: "Bravo Emergency Services Team"
+    url: "https://bravoest.com/"
+    logo: ""
   - name: "Your Company Name"
     url: ""
     logo: ""
 
-gold:
-  - name: "Company Name"
-    url: ""
-    logo: ""
+main stage:
   - name: "Company Name"
     url: ""
     logo: ""
@@ -18,7 +18,49 @@ gold:
     url: ""
     logo: ""
 
+stage:
+  - name: "Local Business"
+    url: ""
+    logo: ""
+  - name: "Local Business"
+    url: ""
+    logo: ""
+  - name: "Local Business"
+    url: ""
+    logo: ""
+  - name: "Local Business"
+    url: ""
+    logo: ""
+  - name: "Local Business"
+    url: ""
+    logo: ""
+
+bar:
+  - name: "Cancun Cantina"
+    url: "https://www.theoriginalcancuncantina.com/"
+    logo: ""
+  - name: "Local Business"
+    url: ""
+    logo: ""
+
 community:
+  - name: "Local Business"
+    url: ""
+    logo: ""
+  - name: "Local Business"
+    url: ""
+    logo: ""
+  - name: "Local Business"
+    url: ""
+    logo: ""
+  - name: "Local Business"
+    url: ""
+    logo: ""
+
+supporting:
+  - name: "Local Business"
+    url: ""
+    logo: ""
   - name: "Local Business"
     url: ""
     logo: ""
