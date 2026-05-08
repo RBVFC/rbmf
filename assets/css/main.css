@@ -405,16 +405,14 @@ p:last-child { margin-bottom: 0; }
 /* ── ARTIST DETAIL PAGE ── */
 .artist-detail { padding-top: calc(var(--nav-height) + 60px); }
 .artist-detail__hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
+  display: grid; grid-template-columns: 1fr, 2fr; flex-direction: column; gap: 32px; flex-wrap: wrap;
+  align-items: center; justify-content: center; 
   padding: 60px 0 80px;
 }
 .artist-detail__photo {
-  aspect-ratio: 1;
+  aspect-ratio: 3/4;
   object-fit: cover;
-  min-width: 120px;
+  min-width: 300px;
 }
 .artist-detail__photo-placeholder {
   aspect-ratio: 3/4;
@@ -428,7 +426,8 @@ p:last-child { margin-bottom: 0; }
 .artist-detail__info { padding-top: 16px; }
 .artist-detail__name { color: var(--cream); margin-bottom: 20px; }
 .artist-detail__meta {
-  display: flex; gap: 32px; flex-wrap: wrap;
+  display: flex; flex-direction: column; gap: 32px; flex-wrap: wrap;
+  align-items: center; justify-content: center;
   margin-bottom: 32px;
   padding-bottom: 32px;
   border-bottom: 1px solid rgba(237,228,210,0.1);
