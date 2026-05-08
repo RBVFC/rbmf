@@ -155,7 +155,6 @@ description: "Riviera Beach Music Fest 2026 — A community music festival suppo
             </div>
             {% if slot.stage %}<div class="sched-stage">{{ slot.stage }}</div>{% endif %}
           </td>
-          <td><span style="font-family:var(--font-ui);font-size:16px;opacity:0.75;">{{ slot.stage }}</span></td>
           <td>{% if slot.genre != "" %}<span class="sched-genre">{{ slot.genre }}</span>{% endif %}</td>
         </tr>
         {% endfor %}
