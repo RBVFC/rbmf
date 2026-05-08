@@ -242,7 +242,7 @@ p:last-child { margin-bottom: 0; }
 .page-hero__sub {
   font-family: var(--font-ui);
   font-size: 16px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.5em;
   text-transform: uppercase;
   color: rgba(237,228,210,0.45);
 }
@@ -264,7 +264,7 @@ p:last-child { margin-bottom: 0; }
   font-family: var(--font-ui);
   font-weight: 700;
   font-size: 16px;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.50em;
   text-transform: uppercase;
   color: var(--cream);
   padding: 0 44px;
@@ -302,7 +302,7 @@ p:last-child { margin-bottom: 0; }
 .countdown__label {
   font-family: var(--font-ui);
   font-size: 16px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.5em;
   text-transform: uppercase;
   opacity: 0.75;
   margin-top: 7px;
@@ -437,7 +437,7 @@ p:last-child { margin-bottom: 0; }
 .artist-detail__meta-label {
   font-family: var(--font-ui);
   font-size: 16px;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.5em;
   text-transform: uppercase;
   opacity: 0.4;
 }
@@ -452,7 +452,7 @@ p:last-child { margin-bottom: 0; }
   font-family: var(--font-ui);
   font-weight: 700;
   font-size: 16px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.5em;
   text-transform: uppercase;
   padding: 9px 18px;
   border: 1px solid;
@@ -478,7 +478,7 @@ p:last-child { margin-bottom: 0; }
 .artist-audio__label {
   font-family: var(--font-ui);
   font-size: 16px;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.5em;
   text-transform: uppercase;
   opacity: 0.4;
   margin-bottom: 10px;
@@ -492,7 +492,7 @@ audio { width: 100%; accent-color: var(--red); }
   gap: 8px;
   font-family: var(--font-ui);
   font-size: 16px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.5em;
   text-transform: uppercase;
   opacity: 0.75;
   transition: opacity 0.2s;
@@ -507,7 +507,7 @@ audio { width: 100%; accent-color: var(--red); }
 .schedule-table th {
   font-family: var(--font-ui);
   font-size: 16px;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.5em;
   text-transform: uppercase;
   opacity: 0.75;
   padding: 12px 20px;
@@ -522,21 +522,21 @@ audio { width: 100%; accent-color: var(--red); }
 .sched-time {
   font-family: var(--font-ui);
   font-weight: 700;
-  font-size: 17px;
+  font-size: 30px;
   color: var(--red);
   white-space: nowrap;
   width: 130px;
 }
 .sched-artist {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 30px;
   text-transform: uppercase;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.5em;
   color: var(--cream);
 }
 .sched-stage {
   font-family: var(--font-ui);
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--teal);
@@ -567,7 +567,7 @@ audio { width: 100%; accent-color: var(--red); }
   color: var(--cream);
   padding: 2px 8px;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 50px;
   vertical-align: middle;
 }
 
@@ -638,9 +638,9 @@ audio { width: 100%; accent-color: var(--red); }
 }
 .vendor-name {
   font-family: var(--font-display);
-  font-size: 16px;
+  font-size: 20px;
   text-transform: uppercase;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.50em;
   color: var(--cream);
   margin-bottom: 7px;
   line-height: 1.2;
@@ -662,7 +662,7 @@ audio { width: 100%; accent-color: var(--red); }
 .sponsor-tier { margin-bottom: 52px; }
 .sponsor-tier__title {
   font-family: var(--font-ui);
-  font-size: 16px;
+  font-size: 30px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(237,228,210,0.3);
@@ -715,9 +715,9 @@ audio { width: 100%; accent-color: var(--red); }
 .stat-label {
   font-family: var(--font-ui);
   font-size: 16px;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  opacity: 0.55;
+  opacity: 0.75;
   margin-top: 6px;
 }
 
@@ -733,7 +733,7 @@ audio { width: 100%; accent-color: var(--red); }
   font-family: var(--font-display);
   font-size: 20px;
   text-transform: uppercase;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.25em;
   color: var(--cream);
   margin-bottom: 10px;
 }
@@ -755,7 +755,7 @@ audio { width: 100%; accent-color: var(--red); }
   font-family: var(--font-display);
   font-size: 22px;
   text-transform: uppercase;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.25em;
   color: var(--cream);
   line-height: 1.1;
   margin-bottom: 14px;
@@ -782,13 +782,13 @@ audio { width: 100%; accent-color: var(--red); }
 .site-footer__copy {
   font-family: var(--font-ui);
   font-size: 16px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.25em;
   opacity: 0.3;
 }
 .site-footer__fire {
   font-family: var(--font-ui);
   font-size: 16x;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   opacity: 0.3;
 }
