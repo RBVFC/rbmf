@@ -414,7 +414,7 @@ p:last-child { margin-bottom: 0; }
 .artist-detail__photo {
   aspect-ratio: 1;
   object-fit: cover;
-  width: 100%;
+  min-width: 120px;
 }
 .artist-detail__photo-placeholder {
   aspect-ratio: 3/4;
