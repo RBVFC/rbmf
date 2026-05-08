@@ -9,31 +9,10 @@
     - "Vendor & food areas"
     - "Firefighting displays"
 
-- tier: "Early Bird General Admission"
-  price: 25
-  description: "Early bird ticket pricing."
-  featured: true
-  badge: "Best Value"
-  perks:
-    - "Early bird discount pricing"
-    - "Adult tickets for all-day festival access"
-    - "Vendor & food areas"
-    - "Firefighting displays"
-
 - tier: "Concession Admission"
   price: 25
   description: "Full day access for ages 13-20, with access to music, vendors, and firefighting displays."
   featured: false
-  perks:
-    - "Concession tickets for ages 13-20 for all-day festival access"
-    - "Vendor & food areas"
-    - "Firefighting displays"
-
-- tier: "Earyl Bird Concession Admission"
-  price: 25
-  description: "Early Bird Ticket Pricing."
-  featured: true
-  badge: "Best Value"
   perks:
     - "Concession tickets for ages 13-20 for all-day festival access"
     - "Vendor & food areas"
@@ -46,5 +25,26 @@
   perks:
     - "4 adult GA passes for all-day festival access"
     - "Save vs. individual tickets"
+    - "Vendor & food areas"
+    - "Firefighting displays"
+
+- tier: "Early Bird General Admission"
+  price: 25
+  description: "Early bird ticket pricing."
+  featured: true
+  badge: "Best Value"
+  perks:
+    - "Early bird discount pricing"
+    - "Adult tickets for all-day festival access"
+    - "Vendor & food areas"
+    - "Firefighting displays"
+
+- tier: "Earyl Bird Concession Admission"
+  price: 25
+  description: "Early Bird Ticket Pricing."
+  featured: true
+  badge: "Best Value"
+  perks:
+    - "Concession tickets for ages 13-20 for all-day festival access"
     - "Vendor & food areas"
     - "Firefighting displays"
