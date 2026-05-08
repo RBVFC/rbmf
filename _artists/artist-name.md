@@ -5,8 +5,8 @@ headliner: true
 set_time: "7:00 PM – Close"
 stage: "Main Stage"
 hometown: "Baltimore, MD"
-photo: ""          # path: /assets/images/artists/artist-slug.jpg
-audio: ""          # path: /assets/images/artists/artist-slug.mp3
+photo: 
+audio: 
 spotify: ""
 instagram: ""
 facebook: ""
