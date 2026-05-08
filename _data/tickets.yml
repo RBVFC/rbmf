@@ -1,30 +1,60 @@
 # _data/tickets.yml
 
 - tier: "General Admission"
-  price: 45
-  description: "Full day access to all stages and festival grounds."
+  price: 35
+  description: "Full day access to festival, including music, vendors, and firefighting displays."
   featured: false
   perks:
-    - "All-day festival access"
-    - "All stage access"
+    - "Adult tickets for all-day festival access"
     - "Vendor & food areas"
+    - "Firefighting displays"
 
-- tier: "Early Bird"
-  price: 30
+- tier: "Concession Admission"
+  price: 20
+  description: "Full day access for ages 13-20, with access to music, vendors, and firefighting displays."
+  featured: false
+  perks:
+    - "Concession tickets for ages 13-20"
+    - "Vendor & food areas"
+    - "Firefighting displays"
+
+- tier: "Buy 3, get 1 free"
+  price: 100
+  description: "Buy 4 adult general admission tickets for the price of 3."
+  featured: false
+  perks:
+    - "4 adult GA passes for all-day festival access"
+    - "Save vs. individual tickets"
+    - "Vendor & food areas"
+    - "Firefighting displays"
+
+- tier: "Early Bird General Admission"
+  price: 25
   description: "Early bird ticket pricing."
   featured: true
   badge: "Best Value"
   perks:
     - "Early bird discount pricing"
-    - "All-day festival access"
-    - "All stage access"
+    - "Adult tickets for all-day festival access"
     - "Vendor & food areas"
+    - "Firefighting displays"
 
-- tier: "Family Pack"
-  price: 100
-  description: "2 adults + up to 3 children (under 13)."
-  featured: false
+- tier: "Earyl Bird Concession Admission"
+  price: 10
+  description: "Early Bird Concession Ticket Pricing."
+  featured: true
+  badge: "Best Value"
   perks:
-    - "2 adult GA passes"
-    - "Up to 3 kids (under 13) included"
-    - "Save vs. individual tickets"
+    - "Concession tickets for ages 13-20 for all-day festival access"
+    - "Vendor & food areas"
+    - "Firefighting displays"
+
+- tier: "Early Bird Buy 3, get 1 free"
+  price: 75
+  description: "Early Bird 4-for-3 ticket bundle."
+  featured: true
+  perks:
+    - "Early bird discount pricing"
+    - "4 adult GA passes for all-day festival access"
+    - "Vendor & food areas"
+    - "Firefighting displays"

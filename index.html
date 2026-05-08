@@ -28,17 +28,17 @@ description: "Riviera Beach Music Fest 2026 — A community music festival suppo
 
     <div class="anim-fade-up anim-delay-2" style="display:flex;align-items:center;justify-content:center;gap:28px;margin-top:40px;flex-wrap:wrap;">
       <div style="text-align:center;">
-        <div style="font-family:var(--font-ui);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;opacity:0.45;margin-bottom:3px;">Date</div>
+        <div style="font-family:var(--font-ui);font-size:16px;letter-spacing:0.25em;text-transform:uppercase;opacity:0.75;margin-bottom:3px;">Date</div>
         <div style="font-family:var(--font-ui);font-weight:900;font-size:22px;letter-spacing:0.06em;">SAT, OCT 10</div>
       </div>
       <div style="width:1px;height:36px;background:rgba(237,228,210,0.18);"></div>
       <div style="text-align:center;">
-        <div style="font-family:var(--font-ui);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;opacity:0.45;margin-bottom:3px;">Year</div>
+        <div style="font-family:var(--font-ui);font-size:16px;letter-spacing:0.25em;text-transform:uppercase;opacity:0.75;margin-bottom:3px;">Year</div>
         <div style="font-family:var(--font-ui);font-weight:900;font-size:22px;letter-spacing:0.06em;">{{ site.festival.year }}</div>
       </div>
       <div style="width:1px;height:36px;background:rgba(237,228,210,0.18);"></div>
       <div style="text-align:center;">
-        <div style="font-family:var(--font-ui);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;opacity:0.45;margin-bottom:3px;">Location</div>
+        <div style="font-family:var(--font-ui);font-size:16px;letter-spacing:0.25em;text-transform:uppercase;opacity:0.75;margin-bottom:3px;">Location</div>
         <div style="font-family:var(--font-ui);font-weight:900;font-size:22px;letter-spacing:0.06em;">Pasadena, MD</div>
       </div>
     </div>
@@ -75,8 +75,8 @@ description: "Riviera Beach Music Fest 2026 — A community music festival suppo
 
   </div>
 
-  <div style="display:flex;flex-direction:column;align-items:center;gap:7px;opacity:0.35;margin-top:48px;">
-    <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;">Scroll</span>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:7px;opacity:0.75;margin-top:48px;">
+    <span style="font-family:var(--font-ui);font-size:16px;letter-spacing:0.3em;text-transform:uppercase;">Scroll</span>
     <div style="width:1px;height:38px;background:var(--cream);animation:scrollLine 2s infinite;"></div>
   </div>
 </section>
@@ -141,7 +141,6 @@ description: "Riviera Beach Music Fest 2026 — A community music festival suppo
         <tr>
           <th>Time</th>
           <th>Artist / Act</th>
-          <th>Stage</th>
           <th>Genre</th>
         </tr>
       </thead>
@@ -156,13 +155,12 @@ description: "Riviera Beach Music Fest 2026 — A community music festival suppo
             </div>
             {% if slot.stage %}<div class="sched-stage">{{ slot.stage }}</div>{% endif %}
           </td>
-          <td><span style="font-family:var(--font-ui);font-size:12px;opacity:0.45;">{{ slot.stage }}</span></td>
           <td>{% if slot.genre != "" %}<span class="sched-genre">{{ slot.genre }}</span>{% endif %}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
-    <p style="margin-top:16px;font-family:var(--font-ui);font-size:12px;opacity:0.38;letter-spacing:0.1em;">* Schedule subject to change.</p>
+    <p style="margin-top:16px;font-family:var(--font-ui);font-size:16px;opacity:0.75;letter-spacing:0.1em;">* Schedule subject to change.</p>
   </div>
 </section>
 
@@ -189,8 +187,8 @@ description: "Riviera Beach Music Fest 2026 — A community music festival suppo
       </div>
       {% endfor %}
     </div>
-    <p style="margin-top:22px;font-size:13px;opacity:0.6;text-align:center;">
-      Children under 5 admitted free. All proceeds support RBVFC Station {{ site.rbvfc.station }}.
+    <p style="margin-top:22px;font-size:16px;opacity:0.8;text-align:center;">
+      Children under 13 admitted free. All proceeds support RBVFC Station {{ site.rbvfc.station }}.
     </p>
   </div>
 </section>

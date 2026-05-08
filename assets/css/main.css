@@ -304,14 +304,14 @@ p:last-child { margin-bottom: 0; }
   font-size: 16px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  opacity: 0.4;
+  opacity: 0.75;
   margin-top: 7px;
 }
 .countdown__sep {
   font-family: var(--font-display);
   font-size: clamp(28px, 4vw, 52px);
   color: var(--red);
-  opacity: 0.5;
+  opacity: 0.75;
   align-self: flex-start;
   padding-top: 12px;
   line-height: 1;
@@ -337,12 +337,10 @@ p:last-child { margin-bottom: 0; }
 .artist-card__photo {
   width: 100%; height: 100%;
   object-fit: cover;
-  filter: grayscale(30%) contrast(1.1);
   transition: transform 0.5s, filter 0.5s;
 }
 .artist-card:hover .artist-card__photo {
   transform: scale(1.05);
-  filter: grayscale(0%) contrast(1.1);
 }
 .artist-card__placeholder {
   width: 100%; height: 100%;
@@ -397,7 +395,7 @@ p:last-child { margin-bottom: 0; }
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: opacity 0.3s, max-height 0.3s;
+  transition: opacity 0.75s, max-height 0.3s;
   margin-top: 7px;
   line-height: 1.55;
   color: rgba(237,228,210,0.75);
@@ -417,7 +415,6 @@ p:last-child { margin-bottom: 0; }
   aspect-ratio: 3/4;
   object-fit: cover;
   width: 100%;
-  filter: grayscale(15%) contrast(1.05);
 }
 .artist-detail__photo-placeholder {
   aspect-ratio: 3/4;
@@ -497,7 +494,7 @@ audio { width: 100%; accent-color: var(--red); }
   font-size: 16px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  opacity: 0.5;
+  opacity: 0.75;
   transition: opacity 0.2s;
   margin-bottom: 40px;
 }
@@ -512,7 +509,7 @@ audio { width: 100%; accent-color: var(--red); }
   font-size: 16px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  opacity: 0.4;
+  opacity: 0.75;
   padding: 12px 20px;
   text-align: left;
 }
@@ -575,7 +572,7 @@ audio { width: 100%; accent-color: var(--red); }
 }
 
 /* ── TICKET CARDS ── */
-.tickets-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); }
+.tickets-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap);}
 .ticket-card {
   background: rgba(13,13,13,0.3);
   border: 1px solid rgba(237,228,210,0.14);
@@ -592,7 +589,7 @@ audio { width: 100%; accent-color: var(--red); }
   font-size: 16px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  opacity: 0.6;
+  opacity: 0.75;
   margin-bottom: 10px;
 }
 .ticket-price {
@@ -603,7 +600,7 @@ audio { width: 100%; accent-color: var(--red); }
   margin-bottom: 8px;
 }
 .ticket-price sup { font-size: 22px; vertical-align: super; }
-.ticket-desc { font-size: 16px; opacity: 0.65; margin-bottom: 24px; line-height: 1.6; }
+.ticket-desc { font-size: 16px; opacity: 0.75; margin-bottom: 24px; line-height: 1.6; }
 .ticket-perks { margin-bottom: 28px; }
 .ticket-perks li {
   font-family: var(--font-ui);

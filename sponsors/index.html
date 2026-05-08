@@ -90,7 +90,7 @@ description: "Sponsors of Riviera Beach Music Fest 2026 — supporting RBVFC Sta
         {% for sponsor in site.data.sponsors.community %}
         <a href="{{ sponsor.url | default: '#' }}"
            {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}
-           class="sponsor-logo" style="font-size:12px;min-width:140px;">
+           class="sponsor-logo"> 
           {% if sponsor.logo %}
             <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" style="max-height:200px;max-width:200px;">
           {% else %}
@@ -98,7 +98,7 @@ description: "Sponsors of Riviera Beach Music Fest 2026 — supporting RBVFC Sta
           {% endif %}
         </a>
         {% endfor %}
-        <a href="mailto:{{ site.festival.email_sponsors }}" class="sponsor-logo sponsor-logo--empty" style="font-size:11px;min-width:140px;">Become a Sponsor</a>
+        <a href="mailto:{{ site.festival.email_sponsors }}" class="sponsor-logo sponsor-logo--empty">Become a Sponsor</a>
       </div>
     </div>
 
@@ -108,7 +108,7 @@ description: "Sponsors of Riviera Beach Music Fest 2026 — supporting RBVFC Sta
         {% for sponsor in site.data.sponsors.supporting %}
         <a href="{{ sponsor.url | default: '#' }}"
            {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}
-           class="sponsor-logo" style="font-size:12px;min-width:140px;">
+           class="sponsor-logo">
           {% if sponsor.logo %}
             <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" style="max-height:200px;max-width:200px;">
           {% else %}
@@ -116,13 +116,13 @@ description: "Sponsors of Riviera Beach Music Fest 2026 — supporting RBVFC Sta
           {% endif %}
         </a>
         {% endfor %}
-        <a href="mailto:{{ site.festival.email_sponsors }}" class="sponsor-logo sponsor-logo--empty" style="font-size:11px;min-width:140px;">Support Us</a>
+        <a href="mailto:{{ site.festival.email_sponsors }}" class="sponsor-logo sponsor-logo--empty">Support Us</a>
       </div>
     </div>
 
     <div style="margin-top:56px;padding:40px;background:rgba(203,77,72,0.07);border:1px solid rgba(203,77,72,0.2);text-align:center;">
       <div class="label" style="justify-content:center;">Become a Sponsor</div>
-      <p style="font-size:16px;opacity:0.7;max-width:520px;margin:0 auto 26px;line-height:1.75;">
+      <p style="font-size:16px;opacity:0.75;max-width:520px;margin:0 auto 26px;line-height:1.75;">
         Support your community while getting your brand in front of thousands of music fans. Sponsorship packages available at all levels.
       </p>
       <a href="mailto:{{ site.festival.email_sponsors }}" class="btn btn--primary">View Sponsorship Packages</a>

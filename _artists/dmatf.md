@@ -5,9 +5,9 @@ headliner: false
 set_time: "1:40 PM – 2:40 PM"
 stage: "Main Stage"
 hometown: "Maryland"
-photo: ""
-audio: ""
-spotify: ""
+photo: "assets/images/artists/dmatf-logo.png"
+audio: 
+spotify: 
 instagram: "https://www.instagram.com/docsandflannels/"
 facebook: "http://www.facebook.com/docsandflannels"
 youtube: "https://www.youtube.com/channel/UCq7IpXQANNroq0whjieztyQ"
