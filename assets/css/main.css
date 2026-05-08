@@ -413,7 +413,6 @@ p:last-child { margin-bottom: 0; }
   aspect-ratio: 3/4;
   object-fit: cover;
   min-width: 300px;
-  display: flex; align-items: center; justify-content: center;
 }
 .artist-detail__photo-placeholder {
   aspect-ratio: 3/4;
