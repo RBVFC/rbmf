@@ -28,7 +28,7 @@
     - "Vendor & food areas"
     - "Firefighting displays"
 
-- tier: "Early Bird General Admission"
+- tier: "Early Bird"<br>"General Admission"
   price: 25
   description: "Early bird ticket pricing."
   featured: true
