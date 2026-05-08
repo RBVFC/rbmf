@@ -90,7 +90,7 @@ description: "Sponsors of Riviera Beach Music Fest 2026 — supporting RBVFC Sta
         {% for sponsor in site.data.sponsors.community %}
         <a href="{{ sponsor.url | default: '#' }}"
            {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}
-           class="sponsor-logo" style="font-size:12px;min-width:140px;">
+           class="sponsor-logo"> 
           {% if sponsor.logo %}
             <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" style="max-height:200px;max-width:200px;">
           {% else %}
@@ -108,7 +108,7 @@ description: "Sponsors of Riviera Beach Music Fest 2026 — supporting RBVFC Sta
         {% for sponsor in site.data.sponsors.supporting %}
         <a href="{{ sponsor.url | default: '#' }}"
            {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}
-           class="sponsor-logo" style="font-size:12px;min-width:140px;">
+           class="sponsor-logo">
           {% if sponsor.logo %}
             <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" style="max-height:200px;max-width:200px;">
           {% else %}
