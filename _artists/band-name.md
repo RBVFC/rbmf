@@ -5,9 +5,9 @@ headliner: false
 set_time: "5:00 PM – 6:30 PM"
 stage: "Main Stage"
 hometown: "Annapolis, MD"
-photo: ""
-audio: ""
-spotify: ""
+photo: 
+audio: 
+spotify: 
 instagram: ""
 facebook: ""
 youtube: ""
