@@ -48,3 +48,14 @@
     - "Concession tickets for ages 13-20 for all-day festival access"
     - "Vendor & food areas"
     - "Firefighting displays"
+
+- tier: "Early Bird Buy 3, get 1 free"
+  price: 75
+  description: "Buy 4 adult tickets for the price of 3."
+  featured: true
+  perks:
+    - "Early bird discount pricing"
+    - "4 adult GA passes for all-day festival access"
+    - "Save vs. individual tickets"
+    - "Vendor & food areas"
+    - "Firefighting displays"
