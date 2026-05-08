@@ -10,7 +10,7 @@
     - "Firefighting displays"
 
 - tier: "Concession Admission"
-  price: 25
+  price: 20
   description: "Full day access for ages 13-20, with access to music, vendors, and firefighting displays."
   featured: false
   perks:
@@ -40,7 +40,7 @@
     - "Firefighting displays"
 
 - tier: "Earyl Bird Concession Admission"
-  price: 25
+  price: 10
   description: "Early Bird Ticket Pricing."
   featured: true
   badge: "Best Value"
