@@ -66,7 +66,7 @@ h1, h2, h3, h4 {
 h1 { font-size: clamp(56px, 10vw, 120px); }
 h2 { font-size: clamp(32px, 5.5vw, 64px); }
 h3 { font-size: clamp(20px, 3vw, 32px); }
-h4 { font-size: clamp(16px, 2vw, 22px); }
+h4 { font-size: clamp(18px, 2vw, 22px); }
 
 p { margin-bottom: 1em; }
 p:last-child { margin-bottom: 0; }
@@ -86,7 +86,7 @@ p:last-child { margin-bottom: 0; }
 /* ── COMPONENTS: LABELS & SECTION HEADERS ── */
 .label {
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.35em;
   text-transform: uppercase;
@@ -116,7 +116,7 @@ p:last-child { margin-bottom: 0; }
   display: inline-block;
   font-family: var(--font-ui);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   padding: 15px 38px;
@@ -168,7 +168,7 @@ p:last-child { margin-bottom: 0; }
 
 .site-nav__logo {
   font-family: var(--font-display);
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.12em;
   color: var(--cream);
   text-transform: uppercase;
@@ -185,7 +185,7 @@ p:last-child { margin-bottom: 0; }
 .site-nav__links a {
   font-family: var(--font-ui);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(237,228,210,0.65);
@@ -263,7 +263,7 @@ p:last-child { margin-bottom: 0; }
 .ticker__item {
   font-family: var(--font-ui);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--cream);
@@ -301,7 +301,7 @@ p:last-child { margin-bottom: 0; }
 .countdown__num.tick { background: rgba(203,77,72,0.12); }
 .countdown__label {
   font-family: var(--font-ui);
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   opacity: 0.4;
@@ -362,7 +362,7 @@ p:last-child { margin-bottom: 0; }
 }
 .artist-card__placeholder-text {
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   opacity: 0.3;
@@ -379,7 +379,7 @@ p:last-child { margin-bottom: 0; }
 .artist-card:hover .artist-card__overlay { transform: translateY(0); }
 .artist-card__genre {
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--red);
@@ -393,7 +393,7 @@ p:last-child { margin-bottom: 0; }
   color: var(--cream);
 }
 .artist-card__bio-peek {
-  font-size: 13px;
+  font-size: 16px;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -439,7 +439,7 @@ p:last-child { margin-bottom: 0; }
 .artist-detail__meta-item { display: flex; flex-direction: column; gap: 3px; }
 .artist-detail__meta-label {
   font-family: var(--font-ui);
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   opacity: 0.4;
@@ -447,14 +447,14 @@ p:last-child { margin-bottom: 0; }
 .artist-detail__meta-value {
   font-family: var(--font-ui);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
 }
 .artist-detail__bio { font-size: 16px; line-height: 1.8; opacity: 0.85; margin-bottom: 32px; }
 .artist-detail__links { display: flex; gap: 10px; flex-wrap: wrap; }
 .artist-link {
   font-family: var(--font-ui);
   font-weight: 700;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 9px 18px;
@@ -480,7 +480,7 @@ p:last-child { margin-bottom: 0; }
 }
 .artist-audio__label {
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   opacity: 0.4;
@@ -494,7 +494,7 @@ audio { width: 100%; accent-color: var(--red); }
   align-items: center;
   gap: 8px;
   font-family: var(--font-ui);
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   opacity: 0.5;
@@ -509,7 +509,7 @@ audio { width: 100%; accent-color: var(--red); }
 .schedule-table thead tr { border-bottom: 1px solid rgba(237,228,210,0.15); }
 .schedule-table th {
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   opacity: 0.4;
@@ -539,7 +539,7 @@ audio { width: 100%; accent-color: var(--red); }
 }
 .sched-stage {
   font-family: var(--font-ui);
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--teal);
@@ -547,7 +547,7 @@ audio { width: 100%; accent-color: var(--red); }
 }
 .sched-genre {
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   padding: 4px 10px;
@@ -563,7 +563,7 @@ audio { width: 100%; accent-color: var(--red); }
 }
 .headliner-badge {
   font-family: var(--font-ui);
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   background: var(--red);
@@ -589,7 +589,7 @@ audio { width: 100%; accent-color: var(--red); }
 .ticket-card--featured { background: var(--black); border-color: rgba(237,228,210,0.38); }
 .ticket-tier {
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   opacity: 0.6;
@@ -603,11 +603,11 @@ audio { width: 100%; accent-color: var(--red); }
   margin-bottom: 8px;
 }
 .ticket-price sup { font-size: 22px; vertical-align: super; }
-.ticket-desc { font-size: 14px; opacity: 0.65; margin-bottom: 24px; line-height: 1.6; }
+.ticket-desc { font-size: 16px; opacity: 0.65; margin-bottom: 24px; line-height: 1.6; }
 .ticket-perks { margin-bottom: 28px; }
 .ticket-perks li {
   font-family: var(--font-ui);
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 0.07em;
   padding: 7px 0;
   border-bottom: 1px solid rgba(237,228,210,0.08);
@@ -621,7 +621,7 @@ audio { width: 100%; accent-color: var(--red); }
   background: var(--cream);
   color: var(--black);
   font-family: var(--font-ui);
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 6px 14px 16px;
@@ -633,7 +633,7 @@ audio { width: 100%; accent-color: var(--red); }
 .vendor-card { padding: 28px 22px; }
 .vendor-category {
   font-family: var(--font-ui);
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--red);
@@ -665,7 +665,7 @@ audio { width: 100%; accent-color: var(--red); }
 .sponsor-tier { margin-bottom: 52px; }
 .sponsor-tier__title {
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(237,228,210,0.3);
@@ -684,7 +684,7 @@ audio { width: 100%; accent-color: var(--red); }
   background: var(--black-2);
   border: 1px solid rgba(237,228,210,0.08);
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: rgba(237,228,210,0.38);
@@ -694,7 +694,7 @@ audio { width: 100%; accent-color: var(--red); }
 }
 .sponsor-logo:hover { border-color: rgba(237,228,210,0.28); color: rgba(237,228,210,0.75); }
 .sponsor-logo--presenting { min-width: 240px; padding: 28px 52px; font-size: 18px; border-color: rgba(203,77,72,0.28); color: rgba(237,228,210,0.65); }
-.sponsor-logo--empty { border-style: dashed; opacity: 0.32; font-size: 11px; letter-spacing: 0.2em; font-family: var(--font-ui); }
+.sponsor-logo--empty { border-style: dashed; opacity: 0.32; font-size: 16px; letter-spacing: 0.2em; font-family: var(--font-ui); }
 .sponsor-logo--empty:hover { opacity: 0.55; }
 
 /* ── CAUSE / STATS ── */
@@ -717,7 +717,7 @@ audio { width: 100%; accent-color: var(--red); }
 .stat-number span { color: var(--red); font-size: 28px; }
 .stat-label {
   font-family: var(--font-ui);
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   opacity: 0.55;
@@ -740,7 +740,7 @@ audio { width: 100%; accent-color: var(--red); }
   color: var(--cream);
   margin-bottom: 10px;
 }
-.info-card__body { font-size: 14px; opacity: 0.78; line-height: 1.7; }
+.info-card__body { font-size: 16px; opacity: 0.78; line-height: 1.7; }
 
 /* ── FOOTER ── */
 .site-footer {
@@ -764,17 +764,17 @@ audio { width: 100%; accent-color: var(--red); }
   margin-bottom: 14px;
 }
 .site-footer__brand-name span { color: var(--red); }
-.site-footer__tagline { font-size: 13px; opacity: 0.45; line-height: 1.7; max-width: 320px; }
+.site-footer__tagline { font-size: 16px; opacity: 0.45; line-height: 1.7; max-width: 320px; }
 .site-footer__col-title {
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   opacity: 0.38;
   margin-bottom: 18px;
 }
 .site-footer__links li { margin-bottom: 8px; }
-.site-footer__links a { font-size: 14px; color: rgba(237,228,210,0.55); transition: color 0.2s; }
+.site-footer__links a { font-size: 16px; color: rgba(237,228,210,0.55); transition: color 0.2s; }
 .site-footer__links a:hover { color: var(--red); }
 .site-footer__bottom {
   padding-top: 24px;
@@ -784,13 +784,13 @@ audio { width: 100%; accent-color: var(--red); }
 }
 .site-footer__copy {
   font-family: var(--font-ui);
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   opacity: 0.3;
 }
 .site-footer__fire {
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 16x;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   opacity: 0.3;
