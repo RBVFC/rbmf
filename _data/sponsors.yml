@@ -9,13 +9,13 @@ presenting:
 
 main-stage:
   - name: "Your Company Name"
-    url: ""
-    logo: ""
+    url: 
+    logo: 
 
 stage:
   - name: "Your Company Name"
-    url: ""
-    logo: ""
+    url: 
+    logo: 
 
 bar:
   - name: "Cancun Cantina"
@@ -24,11 +24,11 @@ bar:
 
 community:
   - name: "Your Company Name"
-    url: ""
-    logo: ""
+    url: 
+    logo: 
 
 supporting:
-  - name: "Geresbecks "
+  - name: "Geresbeck's Food Market"
     url: "https://geresbecks.com/riviera-plaza/"
     logo: "/assets/images/sponsors/geresbecks-logo.png"
 
