@@ -405,7 +405,7 @@ p:last-child { margin-bottom: 0; }
 /* ── ARTIST DETAIL PAGE ── */
 .artist-detail { padding-top: calc(var(--nav-height) + 60px); }
 .artist-detail__hero {
-  display: flex; flex-direction: column; gap: 32px; flex-wrap: wrap;
+  display: grid; grid-template-columns: 1fr, 2fr; flex-direction: column; gap: 32px; flex-wrap: wrap;
   align-items: center; justify-content: center; 
   padding: 60px 0 80px;
 }
