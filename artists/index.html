@@ -53,7 +53,7 @@ description: "Meet the artists performing at Riviera Beach Music Fest 2026 in Pa
       <table class="schedule-table">
         <thead>
           <tr>
-            <th>Time</th><th>Artist / Act</th><th>Stage</th><th>Genre</th>
+            <th>Time</th><th>Artist / Act</th><th>Genre</th>
           </tr>
         </thead>
         <tbody>
@@ -64,7 +64,6 @@ description: "Meet the artists performing at Riviera Beach Music Fest 2026 in Pa
               <div class="sched-artist">{{ slot.artist }}{% if slot.headliner %}<span class="headliner-badge">Headliner</span>{% endif %}</div>
               {% if slot.stage %}<div class="sched-stage">{{ slot.stage }}</div>{% endif %}
             </td>
-            <td><span style="font-family:var(--font-ui);font-size:16px;opacity:0.75;">{{ slot.stage }}</span></td>
             <td>{% if slot.genre != "" %}<span class="sched-genre">{{ slot.genre }}</span>{% endif %}</td>
           </tr>
           {% endfor %}
