@@ -170,6 +170,18 @@ p:last-child { margin-bottom: 0; }
   border-bottom: 1px solid rgba(237,228,210,0.08);
   transition: border-color 0.3s;
 }
+.site-nav::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: env(safe-area-inset-top);
+  background: rgba(13,13,13,0.93);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 201;
+}
 
 .site-nav__logo {
   font-family: var(--font-display);
