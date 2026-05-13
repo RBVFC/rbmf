@@ -940,8 +940,8 @@ audio { width: 100%; accent-color: var(--red); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .container { padding: 0 24px; }
-  .site-nav { padding: 0 24px; }
+  .container { padding: 0 20px; }
+  .site-nav { padding: 0 20px; }
   .site-nav__links { display: none; }
   .site-nav__links.open {
     display: flex;
@@ -954,24 +954,54 @@ audio { width: 100%; accent-color: var(--red); }
     align-items: flex-start;
     justify-content: flex-start;
     overflow-y: auto;
+    z-index: 199;
   }
   .site-nav__links.open a { font-size: 20px; }
   .nav-toggle { display: flex; }
+  .section { padding: 64px 0; }
   .cause-grid { grid-template-columns: 1fr; gap: 40px; }
   .artists-grid { grid-template-columns: 1fr 1fr; }
   .artist-card--featured { grid-column: span 2; }
-  .tickets-grid { grid-template-columns: 1fr; }
+  .tickets-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
   .vendors-grid { grid-template-columns: 1fr 1fr; }
   .info-grid { grid-template-columns: 1fr 1fr; }
   .site-footer__top { grid-template-columns: 1fr; gap: 36px; }
   .artist-detail__hero { grid-template-columns: 1fr; }
-  .archive-bar__inner { padding: 0 24px; }
-}
-@media (max-width: 540px) {
-  .artists-grid { grid-template-columns: 1fr; }
-  .artist-card--featured { grid-column: span 1; aspect-ratio: 3/4; }
-  .vendors-grid { grid-template-columns: 1fr; }
-  .info-grid { grid-template-columns: 1fr; }
+  .archive-bar__inner { padding: 0 20px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
   .countdown { gap: 2px; }
   .countdown__unit { min-width: 60px; }
+  .schedule-table th,
+  .schedule-table td { padding: 12px 10px; }
+  .sched-artist { font-size: 15px; }
+}
+
+@media (max-width: 600px) {
+  .artists-grid { grid-template-columns: 1fr; }
+  .artist-card--featured {
+    grid-column: span 1;
+    aspect-ratio: 3/4;
+  }
+  .tickets-grid { grid-template-columns: 1fr; }
+  .vendors-grid { grid-template-columns: 1fr; }
+  .info-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .sponsor-row { gap: 16px; }
+  .sponsor-logo { min-width: 130px; padding: 16px 20px; font-size: 12px; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .countdown { gap: 1px; }
+  .countdown__unit { min-width: 52px; }
+  .countdown__num { padding: 10px 8px; font-size: clamp(26px, 7vw, 42px); }
+  .countdown__sep { font-size: clamp(22px, 6vw, 36px); padding-top: 10px; }
+  .countdown__label { font-size: 9px; letter-spacing: 0.2em; }
+  .schedule-table { font-size: 13px; }
+  .schedule-table th { display: none; }
+  .schedule-table td { padding: 10px 8px; }
+  .sched-time { font-size: 14px; width: 80px; }
+  .sched-artist { font-size: 14px; }
+  .sched-genre { display: none; }
+  .ticker__item { font-size: 11px; padding: 0 28px; gap: 28px; }
+  .site-footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .archive-bar__links { display: none; }
+  .archive-bar__text { font-size: 12px; }
 }
