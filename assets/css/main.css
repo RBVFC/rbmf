@@ -649,18 +649,23 @@ audio { width: 100%; accent-color: var(--red); }
 }
 .sched-artist {
   font-family: var(--font-display);
-  font-size: 30px;
+  font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.01em;
   color: var(--cream);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 .sched-stage {
   font-family: var(--font-ui);
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--teal);
-  margin-top: 3px;
+  margin-top: 4px;
 }
 .sched-genre {
   font-family: var(--font-ui);
@@ -680,15 +685,16 @@ audio { width: 100%; accent-color: var(--red); }
 }
 .headliner-badge {
   font-family: var(--font-ui);
-  font-size: 16px;
+  font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   background: var(--red);
   color: var(--cream);
-  padding: 2px 8px;
-  display: inline-block;
-  margin-left: 50px;
-  vertical-align: middle;
+  padding: 3px 8px;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 /* ── TICKET CARDS ── */
