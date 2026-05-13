@@ -169,8 +169,6 @@ p:last-child { margin-bottom: 0; }
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(237,228,210,0.08);
   transition: border-color 0.3s;
-  padding-top: enc(safe-area-inset-top);
-  height: calc(var(--nav-height) + env(safe-area-inset-top)); 
 }
 
 .site-nav__logo {
