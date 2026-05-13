@@ -402,61 +402,166 @@ p:last-child { margin-bottom: 0; }
 }
 .artist-card:hover .artist-card__bio-peek { opacity: 1; max-height: 72px; }
 
-/* ── ARTIST DETAIL PAGE ── */
-.artist-detail { padding-top: calc(var(--nav-height) + 60px); }
-.artist-detail__hero {
-  display: grid; grid-template-columns: 1fr, 2fr; flex-direction: column; gap: 32px; flex-wrap: wrap;
-  align-items: center; justify-content: center; 
-  padding: 60px 0 80px;
+.artist-detail {
+  padding-top: calc(var(--nav-height) + 60px);
 }
+ 
+.artist-detail__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 48px 80px;
+}
+ 
+.artist-detail__hero {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+ 
 .artist-detail__photo {
+  width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
-  min-width: 300px;
+  display: block;
+  filter: grayscale(15%) contrast(1.05);
 }
+ 
 .artist-detail__photo-placeholder {
+  width: 100%;
   aspect-ratio: 3/4;
   background: linear-gradient(135deg, #1a1a1a, #2a1f1f);
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-display);
   font-size: 80px;
   color: rgba(203,77,72,0.1);
   text-transform: uppercase;
 }
-.artist-detail__info { padding-top: 16px; }
-.artist-detail__name { color: var(--cream); margin-bottom: 20px; }
+ 
+.artist-detail__info {
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+ 
+/* Genre label - line 1 */
+.artist-detail__genre {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+ 
+.artist-detail__genre::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--red);
+  flex-shrink: 0;
+}
+ 
+/* Band name - line 2, wraps naturally */
+.artist-detail__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(32px, 5vw, 58px);
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  color: var(--cream);
+  margin-bottom: 24px;
+  word-break: break-word;
+}
+ 
+/* Meta row - line 3: set time · stage · hometown, left to right */
 .artist-detail__meta {
-  display: flex; flex-direction: column; gap: 32px; flex-wrap: wrap;
-  align-items: center; justify-content: center;
-  margin-bottom: 32px;
-  padding-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
   border-bottom: 1px solid rgba(237,228,210,0.1);
 }
-.artist-detail__meta-item { display: flex; flex-direction: column; gap: 3px; }
+ 
+.artist-detail__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+}
+ 
 .artist-detail__meta-label {
   font-family: var(--font-ui);
-  font-size: 16px;
-  letter-spacing: 0.5em;
+  font-size: 10px;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   opacity: 0.4;
 }
+ 
 .artist-detail__meta-value {
   font-family: var(--font-ui);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
+  color: var(--cream);
+  white-space: nowrap;
 }
-.artist-detail__bio { font-size: 16px; line-height: 1.8; opacity: 0.85; margin-bottom: 32px; }
-.artist-detail__links { display: flex; gap: 10px; flex-wrap: wrap; }
+ 
+/* Bio */
+.artist-detail__bio {
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+ 
+/* Audio player */
+.artist-audio {
+  margin-top: 28px;
+  padding: 20px;
+  background: rgba(237,228,210,0.04);
+  border: 1px solid rgba(237,228,210,0.08);
+}
+ 
+.artist-audio__label {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 10px;
+}
+ 
+audio { width: 100%; accent-color: var(--red); }
+ 
+/* Social links */
+.artist-detail__links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+ 
 .artist-link {
   font-family: var(--font-ui);
   font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 0.5em;
+  font-size: 12px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 9px 18px;
   border: 1px solid;
   transition: all 0.2s;
 }
+ 
 .artist-link--spotify   { color: #1DB954; border-color: rgba(29,185,84,0.35); }
 .artist-link--spotify:hover   { background: rgba(29,185,84,0.1); }
 .artist-link--instagram { color: #E4405F; border-color: rgba(228,64,95,0.35); }
@@ -467,38 +572,38 @@ p:last-child { margin-bottom: 0; }
 .artist-link--website:hover   { background: rgba(237,228,210,0.05); }
 .artist-link--youtube   { color: #FF0000; border-color: rgba(255,0,0,0.35); }
 .artist-link--youtube:hover   { background: rgba(255,0,0,0.1); }
-
-.artist-audio {
-  margin-top: 28px;
-  padding: 20px;
-  background: rgba(237,228,210,0.04);
-  border: 1px solid rgba(237,228,210,0.08);
-}
-.artist-audio__label {
-  font-family: var(--font-ui);
-  font-size: 16px;
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  opacity: 0.4;
-  margin-bottom: 10px;
-}
-audio { width: 100%; accent-color: var(--red); }
-
+ 
 /* Back link */
 .back-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-family: var(--font-ui);
-  font-size: 16px;
-  letter-spacing: 0.5em;
+  font-size: 12px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  opacity: 0.75;
+  opacity: 0.5;
   transition: opacity 0.2s;
   margin-bottom: 40px;
 }
 .back-link:hover { opacity: 1; }
 .back-link::before { content: '←'; }
+ 
+/* Responsive */
+@media (max-width: 768px) {
+  .artist-detail__inner { padding: 40px 24px 60px; }
+  .artist-detail__hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .artist-detail__photo,
+  .artist-detail__photo-placeholder {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .artist-detail__name { font-size: clamp(28px, 8vw, 44px); }
+  .artist-detail__meta { gap: 20px; }
+}
 
 /* ── SCHEDULE TABLE ── */
 .schedule-table { width: 100%; border-collapse: collapse; }
