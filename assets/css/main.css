@@ -450,7 +450,7 @@ p:last-child { margin-bottom: 0; }
 /* Genre label - line 1 */
 .artist-detail__genre {
   font-family: var(--font-ui);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -503,7 +503,7 @@ p:last-child { margin-bottom: 0; }
  
 .artist-detail__meta-label {
   font-family: var(--font-ui);
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   opacity: 0.4;
@@ -512,7 +512,7 @@ p:last-child { margin-bottom: 0; }
 .artist-detail__meta-value {
   font-family: var(--font-ui);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--cream);
   white-space: nowrap;
 }
@@ -534,7 +534,7 @@ p:last-child { margin-bottom: 0; }
  
 .artist-audio__label {
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   opacity: 0.4;
@@ -554,7 +554,7 @@ audio { width: 100%; accent-color: var(--red); }
 .artist-link {
   font-family: var(--font-ui);
   font-weight: 700;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 9px 18px;
@@ -579,7 +579,7 @@ audio { width: 100%; accent-color: var(--red); }
   align-items: center;
   gap: 8px;
   font-family: var(--font-ui);
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   opacity: 0.5;
@@ -734,7 +734,7 @@ audio { width: 100%; accent-color: var(--red); }
 .vendor-card { padding: 28px 22px; }
 .vendor-category {
   font-family: var(--font-ui);
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--red);
@@ -749,7 +749,7 @@ audio { width: 100%; accent-color: var(--red); }
   margin-bottom: 7px;
   line-height: 1.2;
 }
-.vendor-desc { font-size: 13px; opacity: 0.6; line-height: 1.6; }
+.vendor-desc { font-size: 16px; opacity: 0.6; line-height: 1.6; }
 .vendor-card--empty {
   border-style: dashed !important;
   opacity: 0.45;
