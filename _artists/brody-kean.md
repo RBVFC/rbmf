@@ -5,7 +5,7 @@ headliner: false
 set_time: "4:35 PM – 5:50 PM"
 stage: "Main Stage"
 hometown: "Pasadena, MD"
-photo: "assets/images/artists/brody-kean.JPG"
+photo: "assets/images/artists/brody-kean-live.jpg"
 audio: 
 spotify: "https://open.spotify.com/artist/06Prh8AqQyQPfglwsmJn0C"
 instagram: "https://instagram.com/brodykeanmusic"
