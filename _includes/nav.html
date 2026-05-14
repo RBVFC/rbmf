@@ -1,10 +1,11 @@
 <div style="position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top);background:rgba(13,13,13,0.93);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);z-index:201;"></div>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
-<a href="{{ '/' | relative_url }}" class="site-nav__logo">
-  <img src="{{ '/assets/images/RBMF long logo.png' | relative_url }}"
-       alt="Riviera Beach Music Fest {{ site.festival.year }}"
-       style="height: 60px; width: auto;">
-</a>
+  <div id="safeAreaTest" style="position:fixed;top:60px;left:10px;background:white;color:black;padding:4px 8px;font-size:12px;z-index:9999;"></div>
+  <a href="{{ '/' | relative_url }}" class="site-nav__logo">
+    <img src="{{ '/assets/images/RBMF long logo.png' | relative_url }}"
+         alt="Riviera Beach Music Fest {{ site.festival.year }}"
+         style="height: 60px; width: auto;">
+  </a>
 
   <ul class="site-nav__links" role="list">
     <li><a href="{{ '/artists/' | relative_url }}">Artists</a></li>
@@ -13,9 +14,10 @@
     <li><a href="{{ '/our-cause/' | relative_url }}">Our Cause</a></li>
     <li><a href="{{ '/info/' | relative_url }}">Info</a></li>
     <li><a href="{{ site.festival.ticket_url }}" class="nav-cta" target="_blank" rel="noopener">Get Tickets</a></li>
-  </ul>
+   </ul>
 
   <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
+  
 </nav>
