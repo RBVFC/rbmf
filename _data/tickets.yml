@@ -1,61 +1,19 @@
 # _data/tickets.yml
 
-- tier: "General Admission"
-  price: 35
-  description: "Full day access to festival, including music, vendors, and firefighting displays."
-  featured: false
-  perks:
-    - "Adult tickets for all-day festival access"
-    - "Vendor & food areas"
-    - "Firefighting displays"
+early_bird_active: true
 
-- tier: "Concession Admission"
-  price: 20
-  description: "Full day access for ages 13-20, with access to music, vendors, and firefighting displays."
-  featured: false
-  perks:
-    - "Concession tickets for ages 13-20"
-    - "Vendor & food areas"
-    - "Firefighting displays"
+tickets:
+  - name: "General Admission"
+    description: "Full day access for adults to music, vendors, and firefighting displays."
+    early_bird_price: 25
+    regular_price: 35
 
-- tier: "Buy 3, get 1 free"
-  price: 100
-  description: "Buy 4 adult general admission tickets for the price of 3."
-  featured: false
-  perks:
-    - "4 adult GA passes for all-day festival access"
-    - "Save vs. individual tickets"
-    - "Vendor & food areas"
-    - "Firefighting displays"
+  - name: "Concession Admission"
+    description: "Full day access for ages 13–21 to music, vendors, and firefighting displays."
+    early_bird_price: 10
+    regular_price: 20
 
-- tier: "General Admission"
-  price: 25
-  description: "Early bird ticket pricing."
-  featured: true
-  badge: "Early Bird"
-  perks:
-    - "Early bird discount pricing"
-    - "Adult tickets for all-day festival access"
-    - "Vendor & food areas"
-    - "Firefighting displays"
-
-- tier: "Concession Admission"
-  price: 10
-  description: "Early Bird Concession Ticket Pricing."
-  featured: true
-  badge: "Early Bird"
-  perks:
-    - "Concession tickets for ages 13-20 for all-day festival access"
-    - "Vendor & food areas"
-    - "Firefighting displays"
-
-- tier: "Buy 3, get 1 free"
-  price: 75
-  description: "Early Bird 4-for-3 ticket bundle."
-  featured: true
-  badge: "Early Bird"
-  perks:
-    - "Early bird discount pricing"
-    - "4 adult GA passes for all-day festival access"
-    - "Vendor & food areas"
-    - "Firefighting displays"
+  - name: "4-for-3 Bundle"
+    description: "Buy 4 adult general admission tickets for the price of 3."
+    early_bird_price: 75
+    regular_price: 100
