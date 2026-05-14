@@ -1,6 +1,6 @@
 ---
 title: "MIGGS"
-genre: "Country · Rock"
+genre: "Country"
 headliner: false
 set_time: "12:10 PM – 1:10 PM"
 stage: "Main Stage"
