@@ -715,11 +715,11 @@ audio { width: 100%; accent-color: var(--red); }
 }
 
 .ticket-eb-stripe {
-  background: var(--cream); opacity:0.6; 
+  background: var(--red-dark); 
   color: var(--black);
   font-family: var(--font-ui);
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-align: center;
@@ -782,7 +782,7 @@ audio { width: 100%; accent-color: var(--red); }
   font-size: 16px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 3px 12px;
+  padding: 3px 8px;
   border-radius: 100px;
   margin-bottom: 16px;
 }
