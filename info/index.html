@@ -19,7 +19,7 @@ description: "Practical information for attending Riviera Beach Music Fest 2026 
           {{ site.festival.location_address }}<br><br>
           <a href="https://maps.google.com/?q={{ site.festival.location_address | url_encode }}"
              target="_blank" rel="noopener"
-             style="color:var(--red);font-family:var(--font-ui);font-size:12px;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(203,77,72,0.3);">
+             style="color:var(--red);font-family:var(--font-ui);font-size:14px;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(203,77,72,0.3);">
             Open in Maps →
           </a>
         </p>
@@ -29,9 +29,8 @@ description: "Practical information for attending Riviera Beach Music Fest 2026 
         <div class="info-card__icon">🕐</div>
         <div class="info-card__title">Hours</div>
         <p class="info-card__body">
-          <strong>VIP Entry:</strong> {{ site.festival.vip_entry }}<br>
           <strong>Gates Open:</strong> {{ site.festival.gates_open }}<br>
-          <strong>First Performance:</strong> 12:30 PM<br>
+          <strong>First Performance:</strong> 11:00 AM<br>
           <strong>Festival Close:</strong> {{ site.festival.close }}<br><br>
           <em style="opacity:0.6;font-size:13px;">Rain or Shine · All Ages Welcome</em>
         </p>
@@ -41,8 +40,9 @@ description: "Practical information for attending Riviera Beach Music Fest 2026 
         <div class="info-card__icon">🎟️</div>
         <div class="info-card__title">Tickets & Entry</div>
         <p class="info-card__body">
-          Tickets available online and at the gate (subject to availability). Children under 5 are free.
-          No re-entry after exit. All sales support RBVFC Station {{ site.rbvfc.station }}.
+          Tickets available online and at the gate (subject to availability). Children under 13 are free.
+          Wristbands will be given on arrival, and must be worn at all times. Wristbands required for re-entry.
+          All sales support RBVFC Station {{ site.rbvfc.station }}.
         </p>
       </div>
 
@@ -50,7 +50,7 @@ description: "Practical information for attending Riviera Beach Music Fest 2026 
         <div class="info-card__icon">🍺</div>
         <div class="info-card__title">Food & Drink</div>
         <p class="info-card__body">
-          A variety of local food vendors and licensed bars on site. Outside food and beverages
+          A variety of local food vendors and licensed bars on site. Outside alcoholic beverages
           are not permitted. Cash and card accepted at most vendors.
         </p>
       </div>
@@ -59,10 +59,10 @@ description: "Practical information for attending Riviera Beach Music Fest 2026 
         <div class="info-card__icon">🚗</div>
         <div class="info-card__title">Parking</div>
         <p class="info-card__body">
-          Premium onsite parking available to purchase. Limited street parking for the event.
+          Premium onsite parking available to purchase. No street parking available for the event.
           Attendees are encouraged to use the free shuttle bus from local hubs.
           Streets around the event site will be closed to traffic.<br><br>
-          <em style="opacity:0.6;font-size:13px;">Full parking details to be announced closer to the event.</em>
+          <em style="opacity:0.6;font-size:14px;">Full parking details to be announced closer to the event.</em>
         </p>
       </div>
 
@@ -71,7 +71,8 @@ description: "Practical information for attending Riviera Beach Music Fest 2026 
         <div class="info-card__title">Policies</div>
         <p class="info-card__body">
           No outside alcohol. No professional cameras without press credentials.
-          Folding chairs welcome. Pet-friendly in designated areas only.
+          Folding chairs welcome. Service animals only.
+          All children attending must be accompanied and supervised by a ticketed adult.
           Full policy list available at the gate.
         </p>
       </div>
@@ -80,7 +81,7 @@ description: "Practical information for attending Riviera Beach Music Fest 2026 
 
     <div style="margin-top:56px;padding:36px;background:rgba(237,228,210,0.04);border:1px solid rgba(237,228,210,0.1);text-align:center;">
       <div class="label" style="justify-content:center;">Questions?</div>
-      <p style="font-size:15px;opacity:0.65;margin-bottom:22px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.75;">
+      <p style="font-size:16px;opacity:0.65;margin-bottom:22px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.75;">
         Can't find what you're looking for? Reach out and we'll get back to you.
       </p>
       <a href="mailto:{{ site.festival.email_general }}" class="btn btn--outline">Contact Us</a>
