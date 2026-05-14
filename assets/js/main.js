@@ -94,3 +94,14 @@
   applySafeArea();
   window.addEventListener('resize', applySafeArea);
 })();
+
+// TEMP DIAGNOSTIC - remove after testing
+setTimeout(function() {
+  var el = document.getElementById('safeAreaTest');
+  if (el) {
+    var sat = getComputedStyle(document.documentElement).getPropertyValue('--sat');
+    var safeTop = getComputedStyle(document.documentElement).getPropertyValue('--safe-top');
+    var navHeight = getComputedStyle(document.documentElement).getPropertyValue('--nav-height');
+    el.textContent = 'sat:' + sat + ' | safe-top:' + safeTop + ' | nav:' + navHeight;
+  }
+}, 1000);
