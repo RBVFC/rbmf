@@ -80,29 +80,3 @@
   setInterval(tick, 1000);
 })();
 
-// ── iOS SAFE AREA FIX ──
-(function() {
-  function applySafeArea() {
-    const inset = parseInt(
-      getComputedStyle(document.documentElement)
-        .getPropertyValue('--sat') || '0'
-    );
-    if (inset > 0) {
-      document.documentElement.style.setProperty('--safe-top', inset + 'px');
-    }
-  }
-  applySafeArea();
-  window.addEventListener('resize', applySafeArea);
-})();
-
-// TEMP DIAGNOSTIC
-setTimeout(function() {
-  var el = document.createElement('div');
-  el.style.cssText = 'position:fixed;top:80px;left:10px;background:white;color:black;padding:6px 10px;font-size:13px;z-index:9999;border-radius:4px;';
-  var sat = getComputedStyle(document.documentElement).getPropertyValue('--sat');
-  var screenH = screen.height;
-  var innerH = window.innerHeight;
-  var diff = screenH - innerH;
-  el.textContent = 'sat:' + sat + ' | screen:' + screenH + ' | inner:' + innerH + ' | diff:' + diff;
-  document.body.appendChild(el);
-}, 1500);
