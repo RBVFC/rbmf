@@ -697,57 +697,144 @@ audio { width: 100%; accent-color: var(--red); }
 }
 
 /* ── TICKET CARDS ── */
-.tickets-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap);}
-.ticket-card {
-  background: rgba(13,13,13,0.3);
-  border: 1px solid rgba(237,228,210,0.14);
-  padding: 38px;
+.tickets-outer {
   position: relative;
+}
+
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.ticket-card {
+  background: rgba(13,13,13,0.95);
+  border: 1px solid rgba(237,228,210,0.12);
+  border-radius: 12px;
   overflow: hidden;
-  transition: background 0.2s, transform 0.2s;
-  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  padding-bottom: 56px;
 }
-.ticket-card:hover { background: rgba(13,13,13,0.5); transform: translateY(-4px); }
-.ticket-card--featured { background: var(--black); border-color: rgba(237,228,210,0.38); }
-.ticket-tier {
-  font-family: var(--font-ui);
-  font-size: 16px;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  opacity: 0.75;
-  margin-bottom: 10px;
-}
-.ticket-price {
-  font-family: var(--font-display);
-  font-size: 50px;
-  line-height: 1;
+
+.ticket-eb-stripe {
+  background: #0d0d0d;
   color: var(--cream);
-  margin-bottom: 8px;
-}
-.ticket-price sup { font-size: 22px; vertical-align: super; }
-.ticket-desc { font-size: 16px; opacity: 0.75; margin-bottom: 24px; line-height: 1.6; }
-.ticket-perks { margin-bottom: 28px; }
-.ticket-perks li {
   font-family: var(--font-ui);
-  font-size: 16px;
-  letter-spacing: 0.07em;
-  padding: 7px 0;
-  border-bottom: 1px solid rgba(237,228,210,0.08);
-  display: flex; align-items: center; gap: 9px;
-}
-.ticket-perks li::before { content: '✓'; color: var(--red); font-weight: bold; }
-.ticket-card--featured .ticket-perks li::before { color: #4ade80; }
-.ticket-badge {
-  position: absolute;
-  top: 0; right: 22px;
-  background: var(--cream);
-  color: var(--black);
-  font-family: var(--font-ui);
-  font-size: 16px;
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding: 6px 14px 16px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+  text-align: center;
+  padding: 9px;
+  border-bottom: 1px solid rgba(237,228,210,0.08);
+}
+
+.ticket-body {
+  padding: 24px;
+}
+
+.ticket-tier {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(237,228,210,0.45);
+  margin-bottom: 12px;
+}
+
+.ticket-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.ticket-price {
+  font-family: var(--font-display);
+  font-size: 48px;
+  line-height: 1;
+  color: var(--cream);
+}
+
+.ticket-price sup {
+  font-size: 20px;
+  vertical-align: super;
+}
+
+.ticket-price-strike {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: rgba(237,228,210,0.25);
+  text-decoration: line-through;
+}
+
+.ticket-price-strike sup {
+  font-size: 12px;
+}
+
+.ticket-price-strike.eb-gone {
+  color: rgba(237,228,210,0.2);
+}
+
+.ticket-pill {
+  display: inline-block;
+  border: 1px solid rgba(237,228,210,0.2);
+  color: rgba(237,228,210,0.5);
+  font-family: var(--font-ui);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 12px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.ticket-desc {
+  font-size: 13px;
+  opacity: 0.6;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.tickets-btn-wrap {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.tickets-btn {
+  width: 75%;
+  background: var(--red);
+  color: var(--cream);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 18px 32px;
+  border-radius: 100px;
+  text-align: center;
+  display: block;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.5);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.tickets-btn:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .tickets-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .tickets-grid { grid-template-columns: 1fr; }
+  .tickets-btn { width: 90%; }
 }
 
 /* ── VENDOR CARDS ── */
