@@ -709,7 +709,6 @@ audio { width: 100%; accent-color: var(--red); }
 
 .ticket-card {
   background: rgba(13,13,13,0.95);
-  border: 1px solid rgba(237,228,210,0.12);
   border-radius: 12px;
   overflow: hidden;
   padding-bottom: 90px;
@@ -768,7 +767,7 @@ audio { width: 100%; accent-color: var(--red); }
 }
 
 .ticket-price-strike sup {
-  font-size: 16px;
+  font-size: 22px;
 }
 
 .ticket-price-strike.eb-gone {
