@@ -24,7 +24,7 @@
   --nav-height: 68px;
   --container:  1200px;
   --gap:        2px;
-  --safe-top: 59px; 
+  --safe-top: 0px; 
 }
 
 /* ── RESET ── */
