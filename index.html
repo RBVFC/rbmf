@@ -168,25 +168,43 @@ description: "Riviera Beach Music Fest 2026 — A community music festival suppo
   <div class="container" style="position:relative;z-index:1;">
     <div class="label label--light">Admission</div>
     <h2 style="margin-bottom:48px;">Get Your Tickets</h2>
-    <div class="tickets-grid">
-      {% for ticket in site.data.tickets %}
-      <div class="ticket-card{% if ticket.featured %} ticket-card--featured{% endif %}">
-        {% if ticket.badge %}<div class="ticket-badge">{{ ticket.badge }}</div>{% endif %}
-        <div class="ticket-tier">{{ ticket.tier }}</div>
-        <div class="ticket-price"><sup>$</sup>{{ ticket.price }}</div>
-        <p class="ticket-desc">{{ ticket.description }}</p>
-        <ul class="ticket-perks">
-          {% for perk in ticket.perks %}
-          <li>{{ perk }}</li>
-          {% endfor %}
-        </ul>
-        <a href="{{ site.festival.ticket_url }}" target="_blank" rel="noopener"
-           class="btn btn--dark" style="width:100%;text-align:center;display:block;">Buy Tickets</a>
+
+    <div class="tickets-outer">
+      <div class="tickets-grid">
+        {% assign eb = site.data.tickets.early_bird_active %}
+        {% for ticket in site.data.tickets.tickets %}
+        <div class="ticket-card">
+          {% if eb %}
+          <div class="ticket-eb-stripe">⚡ Early Bird</div>
+          {% endif %}
+          <div class="ticket-body">
+            <div class="ticket-tier">{{ ticket.name }}</div>
+            {% if eb %}
+            <div class="ticket-price-row">
+              <span class="ticket-price-strike"><sup>$</sup>{{ ticket.regular_price }}</span>
+              <span class="ticket-price"><sup>$</sup>{{ ticket.early_bird_price }}</span>
+            </div>
+            <div class="ticket-pill">Prices increase soon</div>
+            {% else %}
+            <div class="ticket-price-row">
+              <span class="ticket-price-strike eb-gone"><sup>$</sup>{{ ticket.early_bird_price }}</span>
+              <span class="ticket-price"><sup>$</sup>{{ ticket.regular_price }}</span>
+            </div>
+            <div class="ticket-pill">Early bird sold out</div>
+            {% endif %}
+            <p class="ticket-desc">{{ ticket.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
+
+      <div class="tickets-btn-wrap">
+        <a href="{{ site.festival.ticket_url }}" target="_blank" rel="noopener" class="tickets-btn">Buy Tickets →</a>
+      </div>
     </div>
-    <p style="margin-top:22px;font-size:16px;opacity:0.8;text-align:center;">
-      Children under 13 admitted free. All proceeds support RBVFC Station {{ site.rbvfc.station }}.
+
+    <p style="margin-top:20px;font-size:14px;opacity:0.6;text-align:center;">
+      Children under 13 admitted free · All proceeds support RBVFC Station 13.
     </p>
   </div>
 </section>
