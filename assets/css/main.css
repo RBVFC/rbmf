@@ -712,7 +712,7 @@ audio { width: 100%; accent-color: var(--red); }
   border: 1px solid rgba(237,228,210,0.12);
   border-radius: 12px;
   overflow: hidden;
-  padding-bottom: 56px;
+  padding-bottom: 90px;
 }
 
 .ticket-eb-stripe {
@@ -734,7 +734,7 @@ audio { width: 100%; accent-color: var(--red); }
 
 .ticket-tier {
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(237,228,210,0.45);
@@ -768,7 +768,7 @@ audio { width: 100%; accent-color: var(--red); }
 }
 
 .ticket-price-strike sup {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .ticket-price-strike.eb-gone {
@@ -780,7 +780,7 @@ audio { width: 100%; accent-color: var(--red); }
   border: 1px solid rgba(237,228,210,0.2);
   color: rgba(237,228,210,0.5);
   font-family: var(--font-ui);
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 3px 12px;
@@ -789,7 +789,7 @@ audio { width: 100%; accent-color: var(--red); }
 }
 
 .ticket-desc {
-  font-size: 13px;
+  font-size: 16px;
   opacity: 0.6;
   line-height: 1.6;
   margin-bottom: 0;
@@ -797,7 +797,7 @@ audio { width: 100%; accent-color: var(--red); }
 
 .tickets-btn-wrap {
   position: absolute;
-  bottom: 28px;
+  bottom: 20px;
   left: 0;
   right: 0;
   display: flex;
@@ -811,7 +811,7 @@ audio { width: 100%; accent-color: var(--red); }
   color: var(--cream);
   font-family: var(--font-ui);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   padding: 18px 32px;
