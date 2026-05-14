@@ -1,6 +1,3 @@
-@viewport {
-  viewport-fit: cover;
-}
 /* ============================================================
    RBMF Design System
    All brand tokens, typography, layout, and component styles.
@@ -27,7 +24,6 @@
   --nav-height: 68px;
   --container:  1200px;
   --gap:        2px;
-  --safe-top: 0px; 
 }
 
 /* ── RESET ── */
