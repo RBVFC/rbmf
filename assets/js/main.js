@@ -79,3 +79,18 @@
   tick();
   setInterval(tick, 1000);
 })();
+
+// ── iOS SAFE AREA FIX ──
+(function() {
+  function applySafeArea() {
+    const inset = parseInt(
+      getComputedStyle(document.documentElement)
+        .getPropertyValue('--sat') || '0'
+    );
+    if (inset > 0) {
+      document.documentElement.style.setProperty('--safe-top', inset + 'px');
+    }
+  }
+  applySafeArea();
+  window.addEventListener('resize', applySafeArea);
+})();
