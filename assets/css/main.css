@@ -27,6 +27,15 @@
   --safe-top: 0px; 
 }
 
+/* ── iOS SAFE AREA OVERRIDE ── */
+@supports (-webkit-touch-callout: none) {
+  .site-nav {
+    height: calc(var(--nav-height) + 50px);
+    align-items: flex-end;
+    padding-bottom: 12px;
+  }
+}
+
 /* ── RESET ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html {
@@ -161,15 +170,13 @@ p:last-child { margin-bottom: 0; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 200;
-  height: calc(var(--nav-height) + var(--safe-top));
-  padding-top: var(--safe-top);
+  height: calc(var(--nav-height) + 50px);
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   padding-left: 48px;
   padding-right: 48px;
-  padding-bottom: 0;
-  padding-top: env(safe-area-inset-top);
+  padding-bottom: 12;
   background: var(--red);
   border-bottom: 1px solid rgba(237,228,210,0.08);
   transition: border-color 0.3s;
