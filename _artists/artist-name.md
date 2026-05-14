@@ -1,7 +1,7 @@
 ---
 title: "Artist Name"
-genre: "Rock / Country"
-headliner: true
+genre: "Rock · Country"
+headliner: false
 set_time: "7:00 PM – Close"
 stage: "Main Stage"
 hometown: "Baltimore, MD"
