@@ -1,6 +1,6 @@
 ---
 title: "Joey Harkum Band"
-genre: "Rock · Folk"
+genre: "Folk Rock"
 headliner: false
 set_time: "6:15 PM – 7:30 PM"
 stage: "Main Stage"
@@ -12,7 +12,7 @@ instagram: "https://www.instagram.com/joeyharkum/"
 facebook: "https://www.facebook.com/JoeyHarkum/"
 youtube: "https://www.youtube.com/user/joeyharkummusic"
 website: "http://www.joeyharkum.com/"
-bio_short: "A one-sentence teaser that shows on the lineup grid card."
+bio_short: "Through deep, poignant lyrics which tell stories of happiness, love, loss and sadness, Joey Harkum has been traveling and playing his heartfelt songs for over a decade."
 ---
 
 For his entire life Joey Harkum has been strumming a guitar and after a decade of touring as the lead singer and songwriter of Baltimore-based band Pasadena, he released his debut solo album, Love and Labor, to critical acclaim in 2016.
