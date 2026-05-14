@@ -91,9 +91,9 @@ p:last-child { margin-bottom: 0; }
 /* ── COMPONENTS: LABELS & SECTION HEADERS ── */
 .label {
   font-family: var(--font-ui);
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.35em;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--red);
   display: flex;
@@ -244,10 +244,11 @@ p:last-child { margin-bottom: 0; }
 .page-hero h1 { color: var(--cream); margin-bottom: 16px; }
 .page-hero__sub {
   font-family: var(--font-ui);
-  font-size: 16px;
-  letter-spacing: 0.5em;
+  font-weight: 500; 
+  font-size: 18px;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: rgba(237,228,210,0.45);
+  color: rgba(237,228,210,0.75);
 }
 
 /* ── TICKER ── */
