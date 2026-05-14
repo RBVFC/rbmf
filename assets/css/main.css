@@ -820,7 +820,7 @@ audio { width: 100%; accent-color: var(--red); }
 
 /* ── CAUSE / STATS ── */
 .cause-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-.cause-text p { font-size: 16px; line-height: 1.8; opacity: 0.82; }
+.cause-text p { font-size: 18px; font-weight: 700; letter-spacing: 0.35em; line-height: 1.8; opacity: 1; }
 .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
 .stat-box {
   background: rgba(237,228,210,0.06);
