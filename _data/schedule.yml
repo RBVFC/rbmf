@@ -8,46 +8,46 @@
   genre: ""
   headliner: false
 
-- time: "11:00 AM"
-  artist: "Big Al and the Hawgs"
+- time: "TBA"
+  artist: "Lineup Announcement Coming Soon"
   stage: "Main Stage"
   genre: ""
   headliner: false
 
-- time: "12:10 PM"
-  artist: "MIGGS"
+- time: "TBA"
+  artist: "Lineup Announcement Coming Soon"
   stage: "Main Stage"
-  genre: "Country"
+  genre: ""
   headliner: false
 
-- time: "1:40 PM"
-  artist: "Doc Marten and the Flannels"
+- time: "TBA"
+  artist: "Lineup Announcement Coming Soon"
   stage: "Main Stage"
-  genre: "90s Rock"
+  genre: ""
   headliner: false
 
-- time: "3:10 PM"
-  artist: "Red Dirt Revolution"
+- time: "TBA"
+  artist: "Lineup Announcement Coming Soon"
   stage: "Main Stage"
-  genre: "Country"
+  genre: ""
   headliner: false
 
-- time: "4:35 PM"
-  artist: "Brody Kean"
+- time: "TBA"
+  artist: "Lineup Announcement Coming Soon"
   stage: "Main Stage"
-  genre: "Country"
+  genre: ""
+  headliner: false
+  
+- time: "TBA"
+  artist: "Lineup Announcement Coming Soon"
+  stage: "Main Stage"
+  genre: ""
   headliner: false
 
-- time: "6:15 PM"
-  artist: "Joey Harkum Band"
+- time: "TBA"
+  artist: "Lineup Announcement Coming Soon"
   stage: "Main Stage"
-  genre: "Rock"
-  headliner: false
-
-- time: "8:00 PM"
-  artist: "Luke Borchelt"
-  stage: "Main Stage"
-  genre: "Country"
+  genre: ""
   headliner: true
 
 - time: "9:30 PM"
