@@ -851,7 +851,7 @@ audio { width: 100%; accent-color: var(--red); }
   font-family: var(--font-display);
   font-size: 20px;
   text-transform: uppercase;
-  letter-spacing: 0.50em;
+  letter-spacing: 0.25em;
   color: var(--cream);
   margin-bottom: 7px;
   line-height: 1.2;
