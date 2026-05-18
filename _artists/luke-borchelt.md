@@ -5,7 +5,7 @@ headliner: true
 set_time: "8:00 PM – Close"
 stage: "Main Stage"
 hometown: "Riva, MD"
-photo: "assets/images/artists/luke-borchelt.jpg"
+photo: "assets/images/artists/lb-flag.jpeg"
 audio: 
 spotify: "https://open.spotify.com/artist/2O6xZPq4ER6q6xwdW3sLfQ"
 instagram: "https://www.instagram.com/lukeborchelt/"
