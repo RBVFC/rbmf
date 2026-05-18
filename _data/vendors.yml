@@ -17,18 +17,6 @@
 
 - name: "Vendor Name Here"
   category: "Food"
-  description: "Describe the food style, specialty items, or cuisine offered here."
-  website: ""
-  instagram: ""
-
-- name: "RBMF Official Merch"
-  category: "Merchandise"
-  description: "Official festival t-shirts, hats, and commemorative items. All proceeds benefit RBVFC."
-  website: ""
-  instagram: ""
-
-- name: "Vendor Name Here"
-  category: "Food"
   description: "Description of food or product available at the event."
   website: ""
   instagram: ""
