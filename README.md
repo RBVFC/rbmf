@@ -103,10 +103,22 @@ For uploading images, go to the correct folder in your repo, click **Add file â†
 ---
 
 ## Local Preview (optional)
-
 If you want to preview changes before pushing:
 ```bash
 bundle install
 bundle exec jekyll serve
 # Open http://localhost:4000
+```
+
+### Commands
+```bash
+#make changes in vs code. Look at changes, and approve changes to "staged changes". once all changes are staged:
+git status
+git checkout -b example-branch # eg: local-changes
+git status
+git commit -m 'commit message'
+git log #remind to use q to quit
+git push
+git push --set-upstream origin local-changes
+# git push doesn't work yet until ssh auth, so instead go to vs code and use the commit button with the changes tab and then see it reflect in github broswer.
 ```
