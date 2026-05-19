@@ -117,7 +117,7 @@ git status
 git checkout -b example-branch # eg: local-changes
 git status
 git commit -m 'commit message'
-git log
+git log #remind to use q to quit
 git push
 git push --set-upstream origin local-changes
 # git push doesn't work yet until ssh auth, so instead go to vs code and use the commit button with the changes tab and then see it reflect in github broswer.
