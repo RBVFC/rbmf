@@ -106,7 +106,7 @@ For uploading images, go to the correct folder in your repo, click **Add file â†
 
 If you want to preview changes before pushing:
 ```bash
-gem install bundler jekyll
+bundle install
 bundle exec jekyll serve
 # Open http://localhost:4000
 ```
